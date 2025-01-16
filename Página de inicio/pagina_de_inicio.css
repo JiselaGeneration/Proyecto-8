@@ -1,0 +1,33 @@
+/* Animaciones generales */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las tarjetas */
+.collection-thumb {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-thumb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.collection-thumb-img-wrap img {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.collection-thumb-img-wrap img:hover {
+    transform: scale(1.1);
+}
+
+.collection-thumb-title {
+    font-size: 1rem;
+}
