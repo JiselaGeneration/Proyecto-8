@@ -1,10 +1,25 @@
+.bg-light {
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+/* Iconos */
 .border-transparent {
   border-color: transparent !important;
 }
 
 .border-transparent:hover {
   border-color: transparent !important;
-  background-color: rgba(255, 255, 255, 0.651) !important;
+  background-color: #e6373d(126, 27, 27, 0.651) !important;
+  color: white;
 }
 
 /* Subrayado en hover */
@@ -28,12 +43,26 @@
   width: 100%; /* Subraya completamente al pasar el mouse */
 }
 
+/* Dropdown */
 .dropdown-menu {
   transition: opacity 0.3s ease, visibility 0.3s ease;
   margin-top: 6px !important;
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white;
 }
+
 .dropdown:hover .dropdown-menu {
   display: block; /* Muestra el dropdown */
   opacity: 1; /* Totalmente visible */
   visibility: visible;
 }
+
+.dropdown-item{
+  color: white;
+}
+
+.dropdown-item:hover{
+  color: white;
+  background-color: #e6373d;
+}
+
