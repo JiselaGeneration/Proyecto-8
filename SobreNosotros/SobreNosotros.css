@@ -1,94 +1,138 @@
-
-body{
-    color: #21221C;
-    font-family: comic neue;
+body {
+  color: #21221c;
+  font-family: comic neue;
 }
+
 .comic-neue-regular {
-    font-family: "Comic Neue", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Comic Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .comic-neue-bold {
-    font-family: "Comic Neue", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
+  font-family: "Comic Neue", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1em;
+/* Navbar */
+.bg-light {
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white;
 }
 
+.nav-link {
+  color: white;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+/* Iconos */
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.border-transparent:hover {
+  border-color: transparent !important;
+}
+
+/* Subrayado en hover */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Espacio entre texto y subrayado */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%; /* Subraya completamente al pasar el mouse */
+}
+
+/* Dropdown */
+.dropdown-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-top: 6px !important;
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Muestra el dropdown */
+  opacity: 1; /* Totalmente visible */
+  visibility: visible;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: #e6373d;
+}
+
+/* Sobre nosotros */
 section {
-    margin: 2em;
-    padding: 1em;
-    background-color: #fff;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    border-radius: 10px;
-}
-
-
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: black;
-    color: #fff;
+  margin: 2em;
+  padding: 1em;
+  background-color: #fff;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
 }
 
 #equipos {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
-.image-container { 
-    display: inline-block;
-    overflow: hidden;
+.image-container {
+  display: inline-block;
+  overflow: hidden;
 }
 
 .animated-image {
-    display: block;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .image-container:hover .animated-image {
-    transform: scale(1.1);
-     /* Aumenta el tamaño de la imagen al pasar el cursor sobre ella*/
+  transform: scale(1.1);
+  /* Aumenta el tamaño de la imagen al pasar el cursor sobre ella*/
 }
-.card-title { 
-    transition: transform 0.5s ease-in-out;
- }
+.card-title {
+  transition: transform 0.5s ease-in-out;
+}
 .card-title:hover {
-     transform: translateX(10px);
-     /* Mueve el título 10 píxeles a la derecha */
- }
- 
+  transform: translateX(10px);
+  /* Mueve el título 10 píxeles a la derecha */
+}
+
 .overlay {
-    display: none; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay img {
-    max-width: 90%;
-    max-height: 90%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .overlay.show {
-    display: flex;
+  display: flex;
 }
-
- 

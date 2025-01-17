@@ -1,4 +1,3 @@
-/* navbar */
 .bg-light {
   background-color: #e6373d !important; /* Cambia el color de fondo */
   color: white;
@@ -63,20 +62,4 @@
 .dropdown-item:hover {
   color: white;
   background-color: #e6373d;
-}
-
-/* Contactenos */
-.error {
-  color: red;
-  font-size: 12px;
-}
-
-.btn-primary {
-  background-color: #e6373d !important; /* Cambia el color de fondo */
-  border-color: #e6373d !important; /* Cambia el color del borde */
-}
-
-.btn-primary:hover {
-  background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
-  border-color: #e6373d !important;
 }

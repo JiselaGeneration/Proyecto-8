@@ -1,171 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nosotros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="SobreNosotros.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="SobreNosotros.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#Productos">Nuestros productos</a>
-            <a href="#Nosotros">sobre nosotros</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#carrito">🛒</a>
-        </nav>
-        <div class="card text-bg-dark border-0">
-            
-            <img src="images/banner-guajira-1920x600.jpg" class="card-img" alt="...">
-        
-            <div class="card-img-overlay position-absolute top-50 start-50 translate-middle container-sm">
-              <h5 class="card-title display-2 text-center fw-bold">Conocenos</h5>
-            </div>
-        
-          </div>
-    <div class="container">
-        
-        
-        <section id="somos">
-            
-            <div class="card mb-3 border-0">
-                <div class="row g-0">
-                    <div class="col-lg-4">
-                        <div class="image-container">
-                        <img src="https://www.departamentoscolombianos.com/wp-content/uploads/2023/08/colombia-descubre-la-diversidad-cultural-y-natural-de-este-maravilloso-pais.jpg"
-                            class="animated-image img-fluid rounded-start" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title display-5 text-center">¿Quiénes somos?</h5>
-                            <p class="card-text lead text-center">"Colombia Tierra de Sabores" es un ecommerce que conecta a los
-                                colombianos con la diversidad cultural y gastronómica de sus regiones, ofreciendo
-                                productos típicos de alta calidad provenientes de pequeños productores locales. Facilitamos la compra de
-                                artesanías, alimentos y bebidas autóctonas, llevando las tradiciones de cada rincón del
-                                país directamente a la puerta de los hogares.</p>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <!-- Botón del menú hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                        </div>
-                    </div>
-                </div>
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+          <img
+            src="../Navbar/img/tesoros.png"
+            alt="Tesoros de mi tierra"
+            width="100"
+          />
+        </a>
+        <!-- Íconos adicionales -->
+        <div class="d-flex order-lg-3">
+          <a
+            href="/account"
+            class="btn btn-outline-light border-transparent me-2"
+          >
+            <i class="bi bi-person"></i>
+          </a>
+          <a
+            href="#"
+            id="search-toggle"
+            class="btn btn-outline-light border-transparent me-2"
+          >
+            <i class="bi bi-search"></i>
+          </a>
+          <a href="/cart" class="btn btn-outline-light border-transparent me-2">
+            <i class="bi bi-cart"></i>
+          </a>
+        </div>
 
-            </div>
-        </section>
-        <section id="mision">
-            <div class="card mb-3 border-0">
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title display-3 text-center">Nuestra Misión</h5>
-                            <p class="card-text lead text-center">Este ecommerce se dedicará a ofrecer una amplia variedad de alimentos,
-                                artesanías y productos autóctonos, organizados por departamentos y municipios,
-                                facilitando así la exploración y compra de artículos representativos de cada región.</p>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="image-container">
-                        <img src="https://www.deturismoporcolombia.com/img/cafe-2-600x529.jpg"
-                            class="animated-image img-fluid rounded-start" alt="...">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section id="vision">
-            <div class="card mb-3 border-0">
-                <div class="row g-0">
-                    <div class="col-lg-4">
-                        <div class="image-container">
-                        <img src="https://www.shutterstock.com/image-photo/sombrero-vueltiao-hat-colombia-colombian-600nw-2306257551.jpg"
-                            class="animated-image img-fluid rounded-start" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title display-3 text-center">Nuestra Vision</h5>
-                            <p class="card-text lead text-center">Promover y preservar la diversidad cultural y
-                                gastronómica del país. Esta plataforma facilita el acceso a una amplia variedad de
-                                alimentos autóctonos de las diferentes regiones.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="equipo">
-            <div id="equipos">
-            <h5 class="card-title display-5 text-center">Nuestro Equipo</h5>
-            <p class="lead text-sm-center">Somos un equipo de desarrolladores web apasionados por la cultura y la diversidad de Colombia. Nuestro equipo está conformado por cuatro desarrolladores web que se unieron para crear una plataforma que celebre la riqueza cultural de nuestro país.</p>
-            </div>
-
-            <div class="row row-cols-1 row-cols-lg-4 g-4">
-                <div class="card border-0">
-                    <div class="image-container">
-                  <img src="images/Daniela.jpg" class="clickable-image animated-image card-img-top" alt="...">
-                </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Daniela Ospina</h5>
-                    <p class="card-text">Nuestro equipo está liderado por Daniela, una desarrollador de Software con experiencia en diseño y desarrollo de sitios web. Daniela es de la ciudad de Bogotá, y su amor por la arquitectura y la música es evidente en su trabajo.
-                    </p>
-                    <a href="https://www.linkedin.com/in/daniela-ospina-sarmiento-developer/" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII=" alt="linkedin"></a>
-                
-                  </div>
-                </div>
-                <div class="card border-0">
-                    <div class="image-container">
-                  <img src="images/Juan.jpg" class="clickable-image animated-image card-img-top" alt="...">
-                </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Juan Salamanca</h5>
-                    <p class="card-text">Nuestro experto en backend es Juan, un desarrollador web con experiencia en programación y bases de datos MySQL, SQL-Server. Juan es de la ciudad de Soacha, y su pasión por la música y la danza es contagiosa.
-                    </p>
-                    <div ><a href="https://www.linkedin.com/in/juan-pablo-cristancho-salamanca-5002481b2/" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII=" alt="linkedin"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card border-0">
-                    <div class="image-container">
-                  <img src="images/Ignacio.jpg" class="clickable-image animated-image card-img-top" alt="...">
-                </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Ignacio Castañeda</h5>
-                    <p class="card-text">Nuestro experto en frontend es Ignacio, un desarrollador de Software web con experiencia en diseño y desarrollo de interfaces de usuario. Ignacio es originario de la ciudad de Zipaquirá, y su pasión por la literatura y la musica es inspiradora.
-                    </p>
-                    <a href="https://www.linkedin.com/in/jose-ignacio-casta%C3%B1eda-gacha-backend-developer/" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII=" alt="linkedin"></a>
-                
-                  </div>
-                </div>
-                <div class="card border-0">
-                    <div class="image-container">
-                    <img src="images/Jisela.jpg" class="clickable-image animated-image card-img-top" alt="...">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Jisela Castillo</h5>
-                      <p class="card-text">finalmente, Nuestra diseñadora gráfica es Jisela, una talentosa diseñadora con experiencia en diseño visual y branding. Jisela es originaria de la ciudad de Medellin, y su amor por el canto y la música es evidente en su trabajo.
-                    </p>
-                    <a href="https://www.linkedin.com/in/jisela-castillo-sandoval-fronted/" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII=" alt="linkedin"></a>
-                    </div>
-                  </div>
-              </div>
-              <div id="overlay" class="overlay"> <img src="..." alt="Imagen Ampliada" id="overlayImage"> </div>
-
-        </section>
+        <!-- Enlaces de navegación -->
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item hover-underline">
+              <a class="nav-link" href="/collections/capsulas-de-cafe"
+                >INICIO</a
+              >
+            </li>
+            <li class="nav-item hover-underline">
+              <a class="nav-link" href="./SobreNosotros.html">SOBRE NOSOTROS</a>
+            </li>
+            <li class="nav-item dropdown spacing hover-underline">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="cafeDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                PRODUCTOS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="cafeDropdown">
+                <li>
+                  <a
+                    class="dropdown-item hover-underline"
+                    href="/collections/cosechas-especiales"
+                    >REGIÓN ANDINA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item hover-underline"
+                    href="/collections/ediciones-limitadas"
+                    >REGIÓN CARIBE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item hover-underline"
+                    href="/collections/cafes-en-linea"
+                    >REGIÓN AMAZONÍA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item hover-underline"
+                    href="/collections/cafes-en-linea"
+                    >REGIÓN PACÍFICA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item hover-underline"
+                    href="/collections/cafes-en-linea"
+                    >REGIÓN ORINOGUÍA</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item hover-underline">
+              <a class="nav-link" href="../Contactenos/contactenos.html"
+                >CONTACTENOS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Contenedor de la barra de búsqueda -->
+    <div id="search-bar-container" class="bg-light p-3 d-none">
+      <div class="container d-flex align-items-center">
+        <input
+          id="search-input"
+          type="text"
+          class="form-control me-2"
+          placeholder="Escribe para buscar..."
+        />
+        <button id="search-button" class="btn btn-primary me-2">
+          <i class="bi bi-search"></i>
+        </button>
+        <button id="cancel-search" class="btn btn-danger">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
     </div>
-        <footer>
-            <p>&copy; 2025 Colombia Tierra de sabores. Todos los derechos reservados.</p>
-        </footer>
-        <script src="script.js"></script>
-</body>
 
+    <!-- Sobre nosotros -->
+    <div class="card text-bg-dark border-0">
+      <img
+        src="images/banner-guajira-1920x600.jpg"
+        class="card-img"
+        alt="..."
+      />
+
+      <div
+        class="card-img-overlay position-absolute top-50 start-50 translate-middle container-sm"
+      >
+        <h5 class="card-title display-2 text-center fw-bold">Conocenos</h5>
+      </div>
+    </div>
+    <div class="container">
+      <section id="somos">
+        <div class="card mb-3 border-0">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="image-container">
+                <img
+                  src="https://www.departamentoscolombianos.com/wp-content/uploads/2023/08/colombia-descubre-la-diversidad-cultural-y-natural-de-este-maravilloso-pais.jpg"
+                  class="animated-image img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title display-5 text-center">
+                  ¿Quiénes somos?
+                </h5>
+                <p class="card-text lead text-center">
+                  "Colombia Tierra de Sabores" es un ecommerce que conecta a los
+                  colombianos con la diversidad cultural y gastronómica de sus
+                  regiones, ofreciendo productos típicos de alta calidad
+                  provenientes de pequeños productores locales. Facilitamos la
+                  compra de artesanías, alimentos y bebidas autóctonas, llevando
+                  las tradiciones de cada rincón del país directamente a la
+                  puerta de los hogares.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="mision">
+        <div class="card mb-3 border-0">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title display-3 text-center">Nuestra Misión</h5>
+                <p class="card-text lead text-center">
+                  Este ecommerce se dedicará a ofrecer una amplia variedad de
+                  alimentos, artesanías y productos autóctonos, organizados por
+                  departamentos y municipios, facilitando así la exploración y
+                  compra de artículos representativos de cada región.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="image-container">
+                <img
+                  src="https://www.deturismoporcolombia.com/img/cafe-2-600x529.jpg"
+                  class="animated-image img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="vision">
+        <div class="card mb-3 border-0">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="image-container">
+                <img
+                  src="https://www.shutterstock.com/image-photo/sombrero-vueltiao-hat-colombia-colombian-600nw-2306257551.jpg"
+                  class="animated-image img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title display-3 text-center">Nuestra Vision</h5>
+                <p class="card-text lead text-center">
+                  Promover y preservar la diversidad cultural y gastronómica del
+                  país. Esta plataforma facilita el acceso a una amplia variedad
+                  de alimentos autóctonos de las diferentes regiones.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipo">
+        <div id="equipos">
+          <h5 class="card-title display-5 text-center">Nuestro Equipo</h5>
+          <p class="lead text-sm-center">
+            Somos un equipo de desarrolladores web apasionados por la cultura y
+            la diversidad de Colombia. Nuestro equipo está conformado por cuatro
+            desarrolladores web que se unieron para crear una plataforma que
+            celebre la riqueza cultural de nuestro país.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
+          <div class="card border-0">
+            <div class="image-container">
+              <img
+                src="images/Daniela.jpg"
+                class="clickable-image animated-image card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Daniela Ospina</h5>
+              <p class="card-text">
+                Nuestro equipo está liderado por Daniela, una desarrollador de
+                Software con experiencia en diseño y desarrollo de sitios web.
+                Daniela es de la ciudad de Bogotá, y su amor por la arquitectura
+                y la música es evidente en su trabajo.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/daniela-ospina-sarmiento-developer/"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII="
+                  alt="linkedin"
+              /></a>
+            </div>
+          </div>
+          <div class="card border-0">
+            <div class="image-container">
+              <img
+                src="images/Juan.jpg"
+                class="clickable-image animated-image card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Juan Salamanca</h5>
+              <p class="card-text">
+                Nuestro experto en backend es Juan, un desarrollador web con
+                experiencia en programación y bases de datos MySQL, SQL-Server.
+                Juan es de la ciudad de Soacha, y su pasión por la música y la
+                danza es contagiosa.
+              </p>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/juan-pablo-cristancho-salamanca-5002481b2/"
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII="
+                    alt="linkedin"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="card border-0">
+            <div class="image-container">
+              <img
+                src="images/Ignacio.jpg"
+                class="clickable-image animated-image card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ignacio Castañeda</h5>
+              <p class="card-text">
+                Nuestro experto en frontend es Ignacio, un desarrollador de
+                Software web con experiencia en diseño y desarrollo de
+                interfaces de usuario. Ignacio es originario de la ciudad de
+                Zipaquirá, y su pasión por la literatura y la musica es
+                inspiradora.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jose-ignacio-casta%C3%B1eda-gacha-backend-developer/"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII="
+                  alt="linkedin"
+              /></a>
+            </div>
+          </div>
+          <div class="card border-0">
+            <div class="image-container">
+              <img
+                src="images/Jisela.jpg"
+                class="clickable-image animated-image card-img-top"
+                alt="..."
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Jisela Castillo</h5>
+              <p class="card-text">
+                finalmente, Nuestra diseñadora gráfica es Jisela, una talentosa
+                diseñadora con experiencia en diseño visual y branding. Jisela
+                es originaria de la ciudad de Medellin, y su amor por el canto y
+                la música es evidente en su trabajo.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jisela-castillo-sandoval-fronted/"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZElEQVR4nO2ZvUoDQRSFP1Hs/AFtBQt9A99BwV20FIV0lr6CjQTyID6DnSbqg9gp/iDopkpzZWEaw+zOzFrsHbkHThNuZs+Xu3dmk4DJZOqqI2ACTAHp2VNgDJSpECMF4aXBw5ROiHIXMSATBUEl4LsYkEpBUAn4OwZEMnFQfQcUA5lT2yfyApwAG85nwFuOHdlXtF0H1fbmVU/9Wo4gpae+yBHkHRgAm871jLzmCCKKHFTfAcVA5tSlnSk1j+4s2gKWgRVgD7gEPnIAqQ/Og8C114Eb7SA7MRcHloAHzSAp2gZmOYAsRtRcawa5AJ5d3RNw3lJ7qhXkOPH7965WkPuGNevfCOjwMNobyGfDmvXrPi1oBfnrumIgWEe8slsLmxFs1xL/eNiMiJ0jtG+TmhzUvwGpFISUgL9iQMYKgkrAtzEgpYKgEvAhkRoqCCsNviJRhfv3VMPMVO52iu6EyWTil34AFdRDhxtrT8cAAAAASUVORK5CYII="
+                  alt="linkedin"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div id="overlay" class="overlay">
+          <img src="..." alt="Imagen Ampliada" id="overlayImage" />
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
