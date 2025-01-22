@@ -1,0 +1,8 @@
+.zoom-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);  /* Aumenta el tamaño de la imagen al hacer hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Añade sombra a la imagen */
+}
