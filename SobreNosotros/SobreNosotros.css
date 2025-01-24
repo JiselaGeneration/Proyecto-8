@@ -137,3 +137,15 @@ section {
 .overlay.show {
   display: flex;
 }
+/* estilos del contador del carrito */
+#cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  background-color: #f7ffff; /* Color de fondo del contador */
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
