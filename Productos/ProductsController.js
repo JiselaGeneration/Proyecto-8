@@ -142,3 +142,61 @@ productos.addItem(
 document.addEventListener("DOMContentLoaded", () => {
   productos.displayItems();
 });
+
+// Agregar producto al carrito
+function addToCart(id, name, price, image) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingItem = cart.find((item) => item.id === id);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ id, name, price, image, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Manejar clic en botones de añadir al carrito
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+    const id = parseInt(e.target.dataset.id, 10);
+    const name = e.target.dataset.name;
+    const price = parseInt(e.target.dataset.price, 10);
+    const image = e.target.dataset.image;
+
+    addToCart(id, name, price, image);
+    Swal.fire({
+      title: 'Producto agregado',
+      text: 'El producto ha sido agregado exitosamente al carrito.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+      customClass: {
+        confirmButton: 'custom-confirm-button'
+      }
+    });
+    let timerInterval;
+    Swal.fire({
+      title: 'Producto agregado',
+      text: 'El producto ha sido agregado exitosamente al carrito.',
+      icon: 'success',
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
+    });
+  }
+});

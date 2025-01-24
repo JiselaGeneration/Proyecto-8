@@ -1,98 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./productos.css" />
-    <title>Productos</title>
-    <link rel="icon" href="../Navbar/img/logo.png" type="image/png" />
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <!-- Botón del menú hamburguesa -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="./productos.css" />
+  <title>Productos</title>
+  <link rel="icon" href="../Navbar/img/logo.png" type="image/png" />
+</head>
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="/">
-          <img
-            src="../Navbar/img/logo.png"
-            alt="Tesoros de mi tierra"
-            width="100"
-          />
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <!-- Botón del menú hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="/">
+        <img src="../Navbar/img/logo.png" alt="Tesoros de mi tierra" width="100" />
+      </a>
+      <!-- Íconos adicionales -->
+      <div class="d-flex order-lg-3">
+        <a href="/account" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-person"></i>
         </a>
-        <!-- Íconos adicionales -->
-        <div class="d-flex order-lg-3">
-          <a
-            href="/account"
-            class="btn btn-outline-light border-transparent me-2"
-          >
-            <i class="bi bi-person"></i>
-          </a>
-          <a
-            href="#"
-            id="search-toggle"
-            class="btn btn-outline-light border-transparent me-2"
-          >
-            <i class="bi bi-search"></i>
-          </a>
-          <a href="../Carrito/carrito.html" class="btn btn-outline-light border-transparent me-2">
-            <i class="bi bi-cart"></i>
-          </a>
-        </div>
+        <a href="#" id="search-toggle" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-search"></i>
+        </a>
+        <a href="../Carrito/carrito.html" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
 
-        <!-- Enlaces de navegación -->
-        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item hover-underline">
-              <a class="nav-link" href="/collections/capsulas-de-cafe"
-                >INICIO</a
-              >
-            </li>
-            <li class="nav-item hover-underline">
-              <a class="nav-link" href="../SobreNosotros/SobreNosotros.html"
-                >SOBRE NOSOTROS</a
-              >
-            </li>
-            <li class="nav-item hover-underline">
-              <a class="nav-link" href="../Productos/productos.html"
-                >PRODUCTOS</a
-              >
-            </li>
-            <!-- <li class="nav-item dropdown spacing hover-underline">
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="/collections/capsulas-de-cafe">INICIO</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../SobreNosotros/SobreNosotros.html">SOBRE NOSOTROS</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Productos/productos.html">PRODUCTOS</a>
+          </li>
+          <!-- <li class="nav-item dropdown spacing hover-underline">
               <a
                 class="nav-link dropdown-toggle"
                 href="./productos.html"
@@ -141,71 +108,47 @@
                 </li>
               </ul>
             </li> -->
-            <li class="nav-item hover-underline">
-              <a class="nav-link" href="../Contactenos/contactenos.html"
-                >CONTACTENOS</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Contenedor de la barra de búsqueda -->
-    <div id="search-bar-container" class="bg-light p-3 d-none">
-      <div class="container d-flex align-items-center">
-        <input
-          id="search-input"
-          type="text"
-          class="form-control me-2"
-          placeholder="Escribe para buscar..."
-        />
-        <button id="search-button" class="btn btn-primary me-2">
-          <i class="bi bi-search"></i>
-        </button>
-        <button id="cancel-search" class="btn btn-danger">
-          <i class="bi bi-x"></i>
-        </button>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Contactenos/contactenos.html">CONTACTENOS</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- Sección productos -->
-    <div class="productos-header">
-      <h1 class="text-center">PRODUCTOS</h1>
+  </nav>
+  <!-- Contenedor de la barra de búsqueda -->
+  <div id="search-bar-container" class="bg-light p-3 d-none">
+    <div class="container d-flex align-items-center">
+      <input id="search-input" type="text" class="form-control me-2" placeholder="Escribe para buscar..." />
+      <button id="search-button" class="btn btn-primary me-2">
+        <i class="bi bi-search"></i>
+      </button>
+      <button id="cancel-search" class="btn btn-danger">
+        <i class="bi bi-x"></i>
+      </button>
+    </div>
   </div>
-    <div class="container my-5">
-      <div id="productos" class="row">
-        <!-- Los productos se mostrarán aquí -->
-      </div>
+  <!-- Sección productos -->
+  <div class="productos-header">
+    <h1 class="text-center">PRODUCTOS</h1>
+  </div>
+  <div class="container my-5">
+    <div id="productos" class="row">
+      <!-- Los productos se mostrarán aquí -->
     </div>
+  </div>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../Carrito/carrito.js"></script>
+  <script src="./ProductsController.js"></script>
+</body>
 
-    <!-- CARITOOO -->
-
-  <div id="carrito" class="carrito">
-    <div class="container my-5">
-      <h1 class="animated-title"> <span class="highlight"></span> Tu carrito </h1>
-      <div id="cart-items">
-        <p>Tu carrito está vacío.</p>
-      </div>
-      <h4 id="total-points">Total: 0 puntos</h4> <button id="pay-cart" class="btn btn-danger">Proceder al pago</button>
-      <button id="clear-cart" class="btn btn-danger">Vaciar Carrito</button>
-    </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-<script src="../Carrito/carrito.js"></script>
-    <script src="./ProductsController.js"></script>
-  </body>
 </html>
