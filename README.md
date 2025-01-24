@@ -1,7 +1,13 @@
 # Proyecto-8
 
-Rama entregas_grupo8
+## Rama: entregas_grupo8
 
-Entrega #4 Página somos nosotros
-Entrega #5 Página contactenos
-Enterga #6 Barra de navegación integrada en página sobre nosotros y contáctenos
+### Entregas:
+
+1. **Entrega #4**: Página **"Somos Nosotros"**
+
+2. **Entrega #5**: Página **"Contáctenos"**
+
+3. **Entrega #6**: Barra de navegación integrada en las páginas **"Sobre Nosotros"** y **"Contáctenos"**
+
+4. **Entrega #7**: Página **"Productos"**
