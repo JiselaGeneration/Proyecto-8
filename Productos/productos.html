@@ -69,7 +69,7 @@
           >
             <i class="bi bi-search"></i>
           </a>
-          <a href="/cart" class="btn btn-outline-light border-transparent me-2">
+          <a href="../Carrito/carrito.html" class="btn btn-outline-light border-transparent me-2">
             <i class="bi bi-cart"></i>
           </a>
         </div>
@@ -177,6 +177,19 @@
       </div>
     </div>
 
+
+    <!-- CARITOOO -->
+
+  <div id="carrito" class="carrito">
+    <div class="container my-5">
+      <h1 class="animated-title"> <span class="highlight"></span> Tu carrito </h1>
+      <div id="cart-items">
+        <p>Tu carrito está vacío.</p>
+      </div>
+      <h4 id="total-points">Total: 0 puntos</h4> <button id="pay-cart" class="btn btn-danger">Proceder al pago</button>
+      <button id="clear-cart" class="btn btn-danger">Vaciar Carrito</button>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -192,7 +205,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-
+<script src="../Carrito/carrito.js"></script>
     <script src="./ProductsController.js"></script>
   </body>
 </html>

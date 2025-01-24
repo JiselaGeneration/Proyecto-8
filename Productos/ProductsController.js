@@ -38,7 +38,7 @@ class ProductsController {
             <p class="card-text">
                 <i class="bi bi-currency-dollar"></i> <strong>${producto.price}</strong> 
             </p>
-            <a href="#" class="btn btn-primary mt-auto d-flex justify-content-center align-items-center py-2 zoom-button">Añadir al Carrito</a>
+            <button class="add-to-cart btn btn-primary mt-auto d-flex justify-content-center align-items-center py-2 zoom-button" data-id=${producto.id} data-name=${producto.name} data-price=${producto.price} data-image=${producto.imageUrl}>Añadir al Carrito</button>
         </div>
     </div>
 </div>
