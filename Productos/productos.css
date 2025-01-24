@@ -6,11 +6,11 @@ body {
 /* navbar */
 .bg-light {
   background-color: #e6373d !important; /* Cambia el color de fondo */
-  color: white;
+  color: white ;
 }
 
 .nav-link {
-  color: white;
+  color: white !important;
 }
 
 .nav-item :hover {
@@ -86,24 +86,42 @@ body {
   border-color: #e6373d !important;
 }
 
-#contacto{
-  background-color: #91928cce;
-  background-image:linear-gradient(rgba(212, 206, 206, 0.5), rgba(235, 225, 225, 0.377)), url("https://www.deturismoporcolombia.com/img/destinos/cartagena/cartagena-4-750x562.jpg");
-  background-size: cover;
-  padding: 15%;
+/* Productos */
+.productos-header {
+  background-image: linear-gradient(rgba(107, 100, 100, 0.822), rgba(143, 135, 135, 0.377)),url('https://www.nuestratiendaartesanal.com/blogold/wp-content/uploads/2017/08/mochilas-tejidas-wayuu.jpg');
+  background-size: cover; 
+  background-position: center; 
+  padding: 50px 0;
 }
 
-.formulario{
-  background-color: #e5e2dbc0;
-  padding: 5% 0%;
-  border-radius: 2%;
+.text-center {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold; 
 }
 
-@media (max-width: 30em) {
-  #contacto{
-    padding: 5%;
-  }
-  .container{
-    padding: 5%;
-  }
+.card-img-top {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.zoom-button {
+  transition: transform 0.3s ease;
+}
+
+.zoom-button:hover {
+  transform: scale(1.1);
+}
+
+.text-truncate{
+  margin-bottom: 2%;
+}
+.text-muted{
+  margin-bottom: 2%;
 }
