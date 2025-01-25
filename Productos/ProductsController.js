@@ -141,7 +141,14 @@ productos.addItem(
 // Mostrar los productos en el HTML al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   productos.displayItems();
+  updateCartCounter();
 });
+// Actualizar el contador del carrito
+function updateCartCounter() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCounter = document.getElementById("cart-counter");
+  cartCounter.textContent = cart.length;
+}
 
 // Agregar producto al carrito
 function addToCart(id, name, price, image) {
@@ -155,6 +162,7 @@ function addToCart(id, name, price, image) {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCounter();
 }
 
 // Manejar clic en botones de añadir al carrito

@@ -65,9 +65,13 @@
           >
             <i class="bi bi-search"></i>
           </a>
-          <a href="/cart" class="btn btn-outline-light border-transparent me-2">
-            <i class="bi bi-cart"></i>
-          </a>
+             <!-- Icono del carrito con contador -->
+    <div class="carrito-icono-container">
+      <a href="../Carrito/carrito.html" class="carrito-icono-container btn btn-outline-light border-transparent me-2">
+        <i class="bi bi-cart"></i>
+        <span id="cart-counter">0</span>
+      </a>
+  </div>
         </div>
 
         <!-- Enlaces de navegación -->
@@ -379,5 +383,7 @@
     </div>
 
     <script src="./SobreNosotros.js"></script>
+    <script src="../Productos/ProductsController.js"></script>
+    <script src="../Carrito/carrito.js"></script>
   </body>
 </html>
