@@ -90,3 +90,154 @@ body {
   font-size: 12px;
   font-weight: bold;
 }
+
+
+
+/*  */
+/* Estilo general del carrito */
+.cart-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilo para la imagen y nombre del producto */
+.item-image-name {
+  flex: 2;
+  min-width: 200px;
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cart-item img {
+  border-radius: 8px;
+}
+
+/* Estilo para la cantidad y precio */
+.item-quantity-price {
+  flex: 1;
+  min-width: 150px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+}
+
+/* Estilo para las acciones de los botones */
+.item-actions {
+  flex: 2;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.item-actions .btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.item-actions .btn-outline-secondary:hover,
+.item-actions .btn-outline-success:hover {
+  background-color: #e9ecef;
+  transform: scale(1.05);
+}
+
+.item-actions .btn-outline-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.item-actions .btn-outline-danger:hover {
+  background-color: #f5c6cb;
+  transform: scale(1.05);
+}
+
+/* Responsividad para pantallas grandes (tablets y laptops) */
+@media (min-width: 768px) {
+  .cart-item {
+    padding: 20px 30px;
+    gap: 30px; /* Mayor espacio entre los elementos */
+  }
+
+  .cart-item .d-flex {
+    justify-content: space-between;
+  }
+
+  .cart-item .item-quantity-price {
+    font-size: 1.2rem;
+  }
+
+  .cart-item .d-flex.align-items-center {
+    gap: 15px;
+  }
+
+  .cart-item .item-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .cart-item {
+    flex-direction: column;
+    gap: 20px; /* Aumenta el espacio entre elementos en dispositivos pequeños */
+    padding: 15px;
+  }
+
+  .cart-item .d-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cart-item .item-quantity-price {
+    font-size: 1rem;
+    min-width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    text-align: center;
+  }
+
+  .cart-item .d-flex.align-items-center {
+    gap: 10px;
+  }
+
+  .cart-item .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* Responsividad para pantallas medianas (laptops) */
+@media (max-width: 1024px) {
+  .cart-item {
+    flex-direction: row;
+    gap: 20px; /* Mantén un buen espacio entre los elementos */
+    padding: 20px 30px;
+  }
+
+  .cart-item .d-flex {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .cart-item .item-quantity-price {
+    font-size: 1.1rem;
+  }
+
+  .cart-item .item-name {
+    font-size: 1.2rem;
+  }
+
+  .cart-item .btn {
+    width: auto;
+  }
+}

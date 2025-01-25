@@ -26,18 +26,23 @@ function updateCart() {
         );
 
         cartItem.innerHTML = `
-                <div class="d-flex align-items-center">
-                    <img src="${item.image}" alt="${item.name}" width="50" height="50" class="me-3">
-                    <span>${item.name}</span>
-                </div>
-                <div>
-                    <span>${item.quantity} x $${item.price}</span>
-                </div>
-                <div class="d-flex align-items-center">
-                    <button class="btn btn-sm btn-secondary decrement me-1" data-id="${item.id}">-</button>
-                    <button class="btn btn-sm btn-success increment me-1" data-id="${item.id}">+</button>
-                    <button class="btn btn-sm btn-danger remove-item" data-id="${item.id}">Eliminar</button>
-                </div>
+<div class="cart-item d-flex flex-wrap align-items-center justify-content-between mb-4 p-3 border rounded">
+  <div class="d-flex align-items-center item-image-name">
+    <img src="${item.image}" alt="${item.name}" width="160" height="160" class="me-3 rounded">
+    <span class="item-name">${item.name}</span>
+  </div>
+
+  <div class="item-quantity-price text-center">
+    <span>${item.quantity} x $${item.price}</span>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center item-actions">
+    <button class="btn btn-sm btn-outline-secondary decrement" data-id="${item.id}">-</button>
+    <button class="btn btn-sm btn-outline-success increment" data-id="${item.id}">+</button>
+    <button class="btn btn-sm btn-outline-danger remove-item" data-id="${item.id}">Eliminar</button>
+  </div>
+</div>
+
             `;
 
         // Agregar el item al contenedor del carrito
