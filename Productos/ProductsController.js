@@ -38,7 +38,7 @@ class ProductsController {
             <p class="card-text">
                 <i class="bi bi-currency-dollar"></i> <strong>${producto.price}</strong> 
             </p>
-            <a href="#" class="btn btn-primary mt-auto d-flex justify-content-center align-items-center py-2 zoom-button">Añadir al Carrito</a>
+            <button class="add-to-cart btn btn-primary mt-auto d-flex justify-content-center align-items-center py-2 zoom-button" data-id=${producto.id} data-name=${producto.name} data-price=${producto.price} data-image=${producto.imageUrl}>Añadir al Carrito</button>
         </div>
     </div>
 </div>
@@ -141,4 +141,70 @@ productos.addItem(
 // Mostrar los productos en el HTML al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   productos.displayItems();
+  updateCartCounter();
+});
+// Actualizar el contador del carrito
+function updateCartCounter() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCounter = document.getElementById("cart-counter");
+  cartCounter.textContent = cart.length;
+}
+
+// Agregar producto al carrito
+function addToCart(id, name, price, image) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingItem = cart.find((item) => item.id === id);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ id, name, price, image, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCounter();
+}
+
+// Manejar clic en botones de añadir al carrito
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+    const id = parseInt(e.target.dataset.id, 10);
+    const name = e.target.dataset.name;
+    const price = parseInt(e.target.dataset.price, 10);
+    const image = e.target.dataset.image;
+
+    addToCart(id, name, price, image);
+    Swal.fire({
+      title: 'Producto agregado',
+      text: 'El producto ha sido agregado exitosamente al carrito.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+      customClass: {
+        confirmButton: 'custom-confirm-button'
+      }
+    });
+    let timerInterval;
+    Swal.fire({
+      title: 'Producto agregado',
+      text: 'El producto ha sido agregado exitosamente al carrito.',
+      icon: 'success',
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
+    });
+  }
 });

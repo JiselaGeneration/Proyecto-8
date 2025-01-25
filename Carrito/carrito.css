@@ -1,0 +1,243 @@
+body {
+  color: #21221c;
+  font-family: comic neue;
+  padding-top: 70px;
+}
+
+/* navbar */
+.bg-dark {
+  background-color: #e6373d !important;
+  /* Cambia el color de fondo */
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+/* Iconos */
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.border-transparent:hover {
+  border-color: transparent !important;
+}
+
+/* Subrayado en hover */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  /* Espacio entre texto y subrayado */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+  /* Subraya completamente al pasar el mouse */
+}
+
+/* Dropdown */
+.dropdown-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-top: 6px !important;
+  background-color: #e6373d !important;
+  /* Cambia el color de fondo */
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  /* Muestra el dropdown */
+  opacity: 1;
+  /* Totalmente visible */
+  visibility: visible;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: #e6373d;
+}
+
+/* estilos del contador del carrito */
+#cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  background-color: #f7ffff;
+  /* Color de fondo del contador */
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+/*  */
+/* Estilo general del carrito */
+.cart-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilo para la imagen y nombre del producto */
+.item-image-name {
+  flex: 2;
+  min-width: 200px;
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cart-item img {
+  border-radius: 8px;
+}
+
+/* Estilo para la cantidad y precio */
+.item-quantity-price {
+  flex: 1;
+  min-width: 150px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+}
+
+/* Estilo para las acciones de los botones */
+.item-actions {
+  flex: 2;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.item-actions .btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.item-actions .btn-outline-secondary:hover,
+.item-actions .btn-outline-success:hover {
+  background-color: #e9ecef;
+  transform: scale(1.05);
+}
+
+.item-actions .btn-outline-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.item-actions .btn-outline-danger:hover {
+  background-color: #f5c6cb;
+  transform: scale(1.05);
+}
+
+/* Responsividad para pantallas grandes (tablets y laptops) */
+@media (min-width: 768px) {
+  .cart-item {
+    padding: 20px 30px;
+    gap: 30px; /* Mayor espacio entre los elementos */
+  }
+
+  .cart-item .d-flex {
+    justify-content: space-between;
+  }
+
+  .cart-item .item-quantity-price {
+    font-size: 1.2rem;
+  }
+
+  .cart-item .d-flex.align-items-center {
+    gap: 15px;
+  }
+
+  .cart-item .item-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .cart-item {
+    flex-direction: column;
+    gap: 20px; /* Aumenta el espacio entre elementos en dispositivos pequeños */
+    padding: 15px;
+  }
+
+  .cart-item .d-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cart-item .item-quantity-price {
+    font-size: 1rem;
+    min-width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    text-align: center;
+  }
+
+  .cart-item .d-flex.align-items-center {
+    gap: 10px;
+  }
+
+  .cart-item .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* Responsividad para pantallas medianas (laptops) */
+@media (max-width: 1024px) {
+  .cart-item {
+    flex-direction: row;
+    gap: 20px; /* Mantén un buen espacio entre los elementos */
+    padding: 20px 30px;
+  }
+
+  .cart-item .d-flex {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .cart-item .item-quantity-price {
+    font-size: 1.1rem;
+  }
+
+  .cart-item .item-name {
+    font-size: 1.2rem;
+  }
+
+  .cart-item .btn {
+    width: auto;
+  }
+}
