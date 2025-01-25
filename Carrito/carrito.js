@@ -10,7 +10,7 @@ function updateCart() {
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = `<p>Tu carrito está vacío.</p>`;
-        totalPoints.textContent = `Total: 0 puntos`;
+        totalPoints.textContent = `Total: $0 `;
         localStorage.setItem("cart", JSON.stringify(cart));
         return;
     }
@@ -31,7 +31,7 @@ function updateCart() {
                     <span>${item.name}</span>
                 </div>
                 <div>
-                    <span>${item.quantity} x ${item.price} pts</span>
+                    <span>${item.quantity} x $${item.price}</span>
                 </div>
                 <div class="d-flex align-items-center">
                     <button class="btn btn-sm btn-secondary decrement me-1" data-id="${item.id}">-</button>
@@ -46,7 +46,7 @@ function updateCart() {
 
     // Calcular el total
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    totalPoints.textContent = `Total: ${total} puntos`;
+    totalPoints.textContent = `Total: $${total}`;
 
     // Almacenar el carrito en el Local Storage
     localStorage.setItem("cart", JSON.stringify(cart));
