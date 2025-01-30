@@ -52,9 +52,32 @@ document.getElementById('registroForm').addEventListener('submit', function(even
     }
 
     if (valid) {
-     document.getElementById('registroForm').submit();
-    }
+        // Crear un objeto de usuario
+        const usuario = {
+            name: name,
+            email: email,
+            phone: phone,
+            password: password
+        };
 
+        //Crear array para usuarios.
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        //Agregar nuevo usuario.
+        usuarios.push(usuario);
+
+        // Guardar el objeto de usuario en el Local Storage
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        // Mostrar un mensaje de éxito
+        alert("Registro exitoso. Los datos se han guardado en el Local Storage.");
+
+        //Limpiar el formulario
+        document.getElementById('registroForm').reset();
+
+        // Opcionalmente, redirigir a otra página
+        window.location.href = "https://docs.google.com/spreadsheets/d/1f9PAidZgF1592LHbdctxAHX-DS0o30Iu0dr4dcqP6uw/edit?gid=1124211828#gid=1124211828";
+    }
 });
 
 
