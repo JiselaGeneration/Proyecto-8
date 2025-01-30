@@ -6,9 +6,8 @@ document.getElementById('registroForm').addEventListener('submit', function(even
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
-    const message = document.getElementById('message').value;
     const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById("confirm-password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
 
     // Limpiar mensajes de error previos
