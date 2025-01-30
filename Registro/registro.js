@@ -76,7 +76,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
         document.getElementById('registroForm').reset();
 
         // Opcionalmente, redirigir a otra página
-        window.location.href = "https://docs.google.com/spreadsheets/d/1f9PAidZgF1592LHbdctxAHX-DS0o30Iu0dr4dcqP6uw/edit?gid=1124211828#gid=1124211828";
+        window.location.href = "../Login/login.html";
     }
 });
 
