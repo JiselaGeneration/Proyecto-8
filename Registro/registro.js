@@ -79,5 +79,3 @@ document.getElementById('registroForm').addEventListener('submit', function(even
         window.location.href = "../Login/login.html";
     }
 });
-
-

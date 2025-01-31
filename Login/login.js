@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (usuario) {
         // Verificar la contraseña
         if (usuario.password === password) {
-            alert("Inicio de sesión exitoso. ¡Bienvenido!");
+            // mostrarAlerta();
             // Redirigir al usuario a otra página (opcional)
             window.location.href = "../Productos/productos.html";
         } else {
