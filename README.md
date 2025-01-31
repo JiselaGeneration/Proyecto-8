@@ -12,5 +12,9 @@
 
 4. **Entrega #7**: Página **"Productos"**
 
-4. **Entrega #7**: Página **"Carrito"**
+5. **Entrega #8**: Página **"Carrito"**
+
+6. **Entrega #9**: Página **"Registro de Usuarios"**
+
+7. **Entrega #10**: Página **"Inicio de Sesión de Usuarios"**
 
