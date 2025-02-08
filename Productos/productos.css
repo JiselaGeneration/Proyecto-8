@@ -85,6 +85,10 @@ body {
   background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
   border-color: #e6373d !important;
 }
+.add-to-cart:active {
+  border: 2px solid rgb(14, 12, 12) !important; /* Cambia este color al que prefieras */
+}
+
 
 /* Productos */
 .productos-header {
@@ -94,7 +98,7 @@ body {
   padding: 50px 0;
 }
 
-.text-center {
+.baner {
   color: white;
   font-size: 2.5rem;
   font-weight: bold; 
@@ -111,13 +115,6 @@ body {
   transform: scale(1.1);
 }
 
-.zoom-button {
-  transition: transform 0.3s ease;
-}
-
-.zoom-button:hover {
-  transform: scale(1.1);
-}
 
 .text-truncate{
   margin-bottom: 2%;
@@ -126,20 +123,7 @@ body {
   margin-bottom: 2%;
 }
 
-/* styles.css */
 
-.swal2-confirm.custom-confirm-button {
-  background-color: #4CAF50; /* Cambia el color aquí */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.swal2-confirm.custom-confirm-button:hover {
-  background-color: #45a049; /* Cambia el color del hover aquí */
-}
 /* estilos del contador del carrito */
 #cart-counter {
   position: absolute;
@@ -151,4 +135,53 @@ body {
   padding: 2px 6px;
   font-size: 12px;
   font-weight: bold;
+}
+
+/* estilos infotmacion de producto sweetalert */
+#swal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#swal-content img.swal-img {
+  width: 50%; /* Ajusta el ancho */
+  height: 22rem; /* Mantiene la proporción */
+  float: left;
+  margin-right: 10px;
+}
+
+#swal-content .info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 50%;
+}
+
+#swal-content button {
+  
+  margin-top: 10px;
+  text-align: center;
+}
+/* Estilos para pantallas pequeñas informacion de producto*/
+@media (max-width: 700px) {
+  #swal-content {
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  #swal-content img.swal-img {
+    width: 100%; /* La imagen ocupa el 100% del ancho en pantallas pequeñas */
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen del texto */
+  }
+
+  #swal-content .info {
+    max-width: 100%; /* El contenido ocupa el 100% del ancho en pantallas pequeñas */
+  }
+
+  #swal-content button {
+    width: 100%; /* El botón ocupa el 100% del ancho en pantallas pequeñas */
+    margin-top: 10px;
+  }
 }

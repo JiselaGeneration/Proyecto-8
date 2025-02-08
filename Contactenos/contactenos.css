@@ -88,9 +88,10 @@ body {
 
 #contacto{
   background-color: #91928cce;
-  background-image:linear-gradient(rgba(212, 206, 206, 0.5), rgba(235, 225, 225, 0.377)), url("https://www.deturismoporcolombia.com/img/destinos/cartagena/cartagena-4-750x562.jpg");
+  background-image: linear-gradient(rgba(7, 5, 5, 0.493), rgba(12, 11, 11, 0.753)),url('https://www.deturismoporcolombia.com/img/destinos/cartagena/cartagena-4-750x562.jpg');
   background-size: cover;
   padding: 15%;
+  color: #f7ffff;
 }
 
 .formulario{
@@ -118,4 +119,8 @@ body {
   padding: 2px 6px;
   font-size: 12px;
   font-weight: bold;
+}
+.card-title {
+  margin-bottom: 5%;
+  margin-top: 5%;
 }

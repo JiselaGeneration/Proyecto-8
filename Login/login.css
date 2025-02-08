@@ -92,5 +92,17 @@ body {
     background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
     border-color: #e6373d !important;
   }
-  
+  .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-container input {
+    padding-right: 30px; /* Espacio para el icono del ojo */
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
   

@@ -167,15 +167,21 @@
                                 <!-- Contraseña -->
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="password"
+                                    <div class="password-container">
+                                    <input type="password" class="form-control password" id="password"
                                         placeholder="Escribe tu contraseña" required>
+                                        <i class="bi bi-eye toggle-password"></i>
+                                      </div>    
                                         <small class="error" id="passwordError"></small>
                                 </div>
                                 <!-- Confirmar Contraseña -->
                                 <div class="mb-3">
                                     <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                                    <input type="password" class="form-control" id="confirmPassword"
+                                    <div class="password-container">
+                                    <input type="password" class="form-control password" id="confirmPassword"
                                         placeholder="Confirma tu contraseña" required>
+                                        <button class="btn bi bi-eye toggle-password-confirm"></button>
+                                      </div>
                                         <small class="error" id="confirmError"></small>
                                 </div>
                                 <!-- Botón Registrar -->
