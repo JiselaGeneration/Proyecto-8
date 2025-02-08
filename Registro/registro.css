@@ -1,0 +1,118 @@
+body {
+    color: #21221c;
+    font-family: comic neue;
+    padding-top: 70px;
+  }
+  /* navbar */
+  .bg-light {
+    background-color: #e6373d !important; /* Cambia el color de fondo */
+    color: white ;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  .nav-item :hover {
+    color: white;
+  }
+  
+  /* Iconos */
+  .border-transparent {
+    border-color: transparent !important;
+  }
+  
+  .border-transparent:hover {
+    border-color: transparent !important;
+  }
+  
+  /* Subrayado en hover */
+  .hover-underline {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .hover-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Espacio entre texto y subrayado */
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  .hover-underline:hover::after {
+    width: 100%; /* Subraya completamente al pasar el mouse */
+  }
+  
+  /* Dropdown */
+  .dropdown-menu {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin-top: 6px !important;
+    background-color: #e6373d !important; /* Cambia el color de fondo */
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Muestra el dropdown */
+    opacity: 1; /* Totalmente visible */
+    visibility: visible;
+  }
+  
+  .dropdown-item {
+    color: white;
+  }
+  
+  .dropdown-item:hover {
+    color: white;
+    background-color: #e6373d;
+  }
+  
+  /* Contactenos */
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+
+  .group-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-primary {
+    background-color: #e6373d !important; /* Cambia el color de fondo */
+    border-color: #e6373d !important; /* Cambia el color del borde */
+    max-width: 100% !important;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
+    border-color: #e6373d !important;
+  }
+  
+  .r_section{
+    margin-top: 3%;
+  }
+  .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-container input {
+    padding-right: 30px; /* Espacio para el icono del ojo */
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #6c757d;
+}
+.toggle-password-confirm{
+  position: absolute;
+    right: 0px;
+    cursor: pointer;
+    color: #6c757d;
+}

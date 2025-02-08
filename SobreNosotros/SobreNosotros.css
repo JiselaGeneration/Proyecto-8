@@ -1,0 +1,219 @@
+body {
+  color: #21221c;
+  font-family: comic neue;
+  padding-top: 70px;
+}
+p{
+  text-align: unset;
+}
+
+.comic-neue-regular {
+  font-family: "Comic Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.comic-neue-bold {
+  font-family: "Comic Neue", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Navbar */
+.bg-light {
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-item :hover {
+  color: white !important;
+}
+
+/* Iconos */
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.border-transparent:hover {
+  border-color: transparent !important;
+}
+
+/* Subrayado en hover */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Espacio entre texto y subrayado */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%; /* Subraya completamente al pasar el mouse */
+}
+
+/* Dropdown */
+.dropdown-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-top: 6px !important;
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Muestra el dropdown */
+  opacity: 1; /* Totalmente visible */
+  visibility: visible;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: #e6373d;
+}
+
+/* Sobre nosotros */
+
+section {
+  display: flexbox;
+  margin: 2em;
+  padding: 1em;
+  background-color: #fff;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+}
+
+#equipos {
+  margin-bottom: 10%;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+
+.card-text {
+  flex: 1;
+  padding: 0px;
+  margin-left: 5%;
+}
+.image-container {
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  .image-container{
+    align-items: center;
+    
+  }
+  .jis{
+    margin-left: 25%;
+  }
+}
+@media (max-width: 576px) {
+  .image-container{
+    align-items: center;
+    
+    margin:0px;
+  }
+  .jis{
+    margin-left: 0%;
+  }
+}
+
+
+.animated-image {
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.image-container{
+  border-radius:5% ;
+}
+
+.image-container:hover .animated-image {
+  transform: scale(1.1);
+  /* Aumenta el tamaño de la imagen al pasar el cursor sobre ella*/
+}
+.card-title {
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.card-title:hover {
+  transform: translateX(10px);
+  /* Mueve el título 10 píxeles a la derecha */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay img {
+  max-width: 75%;
+  max-height: 75%;
+  margin-top: 5%;
+  border-radius: 2%;
+}
+
+.overlay.show {
+  display: flex;
+}
+/* estilos del contador del carrito */
+#cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  background-color: #f7ffff; /* Color de fondo del contador */
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.productos-header {
+  background-image: linear-gradient(rgba(107, 100, 100, 0.699), rgba(143, 135, 135, 0.288)),url('./images/banner-guajira-1920x600.jpg');
+  background-size: cover; 
+  background-position: center; 
+  padding: 50px 0;
+}
+/* Para pantallas pequeñas y medianas (por defecto) */
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+
+/* Para pantallas grandes */
+@media (min-width: 992px) {
+    .order-lg-1 { order: 1; }
+    .order-lg-2 { order: 2; }
+}
+.redes{
+  display: flex;
+  flex-direction: row;
+}
+.redes a {
+  margin-right: 10px; /* Espacio entre los iconos */
+}

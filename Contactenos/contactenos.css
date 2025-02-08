@@ -1,3 +1,9 @@
+body {
+  color: #21221c;
+  font-family: comic neue;
+  padding-top: 70px;
+}
+/* navbar */
 .bg-light {
   background-color: #e6373d !important; /* Cambia el color de fondo */
   color: white;
@@ -63,6 +69,45 @@
   color: white;
   background-color: #e6373d;
 }
+
+/* Contactenos */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  border-color: #e6373d !important; /* Cambia el color del borde */
+}
+
+.btn-primary:hover {
+  background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
+  border-color: #e6373d !important;
+}
+
+#contacto{
+  background-color: #91928cce;
+  background-image: linear-gradient(rgba(7, 5, 5, 0.493), rgba(12, 11, 11, 0.753)),url('https://www.deturismoporcolombia.com/img/destinos/cartagena/cartagena-4-750x562.jpg');
+  background-size: cover;
+  padding: 15%;
+  color: #f7ffff;
+}
+
+.formulario{
+  background-color: #e5e2dbc0;
+  padding: 5% 0%;
+  border-radius: 2%;
+}
+
+@media (max-width: 30em) {
+  #contacto{
+    padding: 5%;
+  }
+  .container{
+    padding: 5%;
+  }
+}
 /* estilos del contador del carrito */
 #cart-counter {
   position: absolute;
@@ -74,4 +119,8 @@
   padding: 2px 6px;
   font-size: 12px;
   font-weight: bold;
+}
+.card-title {
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
