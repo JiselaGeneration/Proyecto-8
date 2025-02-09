@@ -22,7 +22,7 @@
 
 <body>
 
-      <!-- Barra de navegación -->
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
       <!-- Botón del menú hamburguesa -->
@@ -32,31 +32,33 @@
       </button>
 
       <!-- Logo -->
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand d-none d-lg-block" href="../Página de inicio/página_de_inicio.html">
         <img src="../Navbar/img/logo.png" alt="Tesoros de mi tierra" width="100" />
       </a>
+
       <!-- Íconos adicionales -->
       <div class="d-flex order-lg-3">
-        <a href="/account" class="btn btn-outline-light border-transparent me-2">
+        <a href="../Login/login.html" class="btn btn-outline-light border-transparent me-2">
           <i class="bi bi-person"></i>
         </a>
         <a href="#" id="search-toggle" class="btn btn-outline-light border-transparent me-2">
           <i class="bi bi-search"></i>
         </a>
         <!-- Icono del carrito con contador -->
-    <div class="carrito-icono-container">
-        <a href="../Carrito/carrito.html" class="carrito-icono-container btn btn-outline-light border-transparent me-2">
-          <i class="bi bi-cart"></i>
-          <span id="cart-counter">0</span>
-        </a>
-    </div>
-    </div>
+        <div class="carrito-icono-container">
+          <a href="../Carrito/carrito.html"
+            class="carrito-icono-container btn btn-outline-light border-transparent me-2">
+            <i class="bi bi-cart"></i>
+            <span id="cart-counter">0</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Enlaces de navegación -->
       <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item hover-underline">
-            <a class="nav-link" href="/collections/capsulas-de-cafe">INICIO</a>
+            <a class="nav-link" href="../Página de inicio/página_de_inicio.html">INICIO</a>
           </li>
           <li class="nav-item hover-underline">
             <a class="nav-link" href="../SobreNosotros/SobreNosotros.html">SOBRE NOSOTROS</a>
@@ -64,55 +66,6 @@
           <li class="nav-item hover-underline">
             <a class="nav-link" href="../Productos/productos.html">PRODUCTOS</a>
           </li>
-          <!-- <li class="nav-item dropdown spacing hover-underline">
-              <a
-                class="nav-link dropdown-toggle"
-                href="./productos.html"
-                id="cafeDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                PRODUCTOS
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="cafeDropdown">
-                <li>
-                  <a
-                    class="dropdown-item hover-underline"
-                    href="/collections/cosechas-especiales"
-                    >REGIÓN ANDINA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item hover-underline"
-                    href="/collections/ediciones-limitadas"
-                    >REGIÓN CARIBE</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item hover-underline"
-                    href="/collections/cafes-en-linea"
-                    >REGIÓN AMAZONÍA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item hover-underline"
-                    href="/collections/cafes-en-linea"
-                    >REGIÓN PACÍFICA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item hover-underline"
-                    href="/collections/cafes-en-linea"
-                    >REGIÓN ORINOGUÍA</a
-                  >
-                </li>
-              </ul>
-            </li> -->
           <li class="nav-item hover-underline">
             <a class="nav-link" href="../Contactenos/contactenos.html">CONTACTENOS</a>
           </li>
@@ -120,21 +73,9 @@
       </div>
     </div>
   </nav>
-  <!-- Contenedor de la barra de búsqueda -->
-  <div id="search-bar-container" class="bg-light p-3 d-none">
-    <div class="container d-flex align-items-center">
-      <input id="search-input" type="text" class="form-control me-2" placeholder="Escribe para buscar..." />
-      <button id="search-button" class="btn btn-primary me-2">
-        <i class="bi bi-search"></i>
-      </button>
-      <button id="cancel-search" class="btn btn-danger">
-        <i class="bi bi-x"></i>
-      </button>
-    </div>
-  </div>
 
     <!-- Página de Registro -->
-    <section class="vh-100 d-flex align-items-center justify-content-center r_section">
+    <section class="d-flex align-items-center justify-content-center r_section" id="registro">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5">
@@ -199,6 +140,53 @@
         </div>
     </section>
 
+      <!-- Footer -->
+  <footer class="bg-light text-white pt-4">
+    <div class="container">
+      <div class="row">
+        <!-- Columna 1: Sobre Nosotros -->
+        <div class="col-md-4 mb-3">
+          <h5 class="card-title fw-bold text-center">Sobre Nosotros</h5>
+          <p>
+            Somos una empresa dedicada a ofrecer los mejores productos tradicionales y artesanías de nuestra tierra.
+            Creemos en la calidad y autenticidad de cada artículo que ofrecemos.
+          </p>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="col-md-4 mb-3">
+          <h5 class="card-title fw-bold text-center">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="text-center"><a href="../Productos/productos.html"
+                class="text-white text-decoration-none">Productos</a></li>
+            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html" class="text-white text-decoration-none">Sobre
+                Nosotros</a></li>
+            <li class="text-center"><a href="../Contactenos/contactenos.html"
+                class="text-white text-decoration-none">Contáctenos</a></li>
+            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi Cuenta</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div class="col-md-4 mb-3">
+          <h5 class="card-title fw-bold text-center">Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt"></i> Dirección: Calle 123, Bogotá, Colombia</li>
+            <li><i class="bi bi-telephone"></i> Teléfono: +57 123 456 7890</li>
+            <li><i class="bi bi-envelope"></i> <strong>Email:</strong> Tesorosdemitierra2025@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-light">
+
+      <!-- Derechos reservados -->
+      <div class="text-center">
+        <p class="mb-0">© 2025 Tesoros de mi Tierra. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

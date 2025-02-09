@@ -47,29 +47,6 @@ body {
     width: 100%; /* Subraya completamente al pasar el mouse */
   }
   
-  /* Dropdown */
-  .dropdown-menu {
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    margin-top: 6px !important;
-    background-color: #e6373d !important; /* Cambia el color de fondo */
-    color: white;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block; /* Muestra el dropdown */
-    opacity: 1; /* Totalmente visible */
-    visibility: visible;
-  }
-  
-  .dropdown-item {
-    color: white;
-  }
-  
-  .dropdown-item:hover {
-    color: white;
-    background-color: #e6373d;
-  }
-  
   /* Contactenos */
   .error {
     color: red;
@@ -105,4 +82,15 @@ body {
     right: 10px;
     cursor: pointer;
 }
-  
+
+@media (max-width: 700px) {
+  #login{
+    min-height: 36rem ;
+  }
+}
+
+@media (min-width: 700px) {
+  #login{
+    min-height: 45rem ;
+  }
+}

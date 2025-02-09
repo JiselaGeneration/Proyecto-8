@@ -1,22 +1,7 @@
-/* Ajustar el tamaño de los íconos de redes sociales */
-footer a i {
-    font-size: 1.5rem;
-}
-
-/* Estilo para enlaces en el footer */
-footer a {
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #FFD700; /* Color dorado */
-}
-
-/* Centrar los textos y los íconos en la columna de redes sociales */
-footer .col-md-3.text-center {
-    text-align: center;
-}
-
-footer .col-md-3.text-center a {
-    margin: 0 10px;
-}
+  
+  /* navbar */
+  .bg-light {
+    background-color: #e6373d !important;
+    color: white;
+  }
+  

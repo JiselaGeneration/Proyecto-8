@@ -185,3 +185,15 @@ body {
     margin-top: 10px;
   }
 }
+
+@media (max-width: 1200px) {
+  body {
+    padding-top: 13%;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    padding-top: 5%;
+  }
+}
