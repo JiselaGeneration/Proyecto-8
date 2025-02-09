@@ -1,0 +1,176 @@
+body {
+  color: #21221c;
+  font-family: comic neue;
+  padding-top: 70px;
+}
+/* navbar */
+.bg-light {
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  color: white ;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+/* Iconos */
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.border-transparent:hover {
+  border-color: transparent !important;
+}
+
+/* Subrayado en hover */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Espacio entre texto y subrayado */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%; /* Subraya completamente al pasar el mouse */
+}
+
+/* Contactenos */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.btn-primary {
+  background-color: #e6373d !important; /* Cambia el color de fondo */
+  border-color: #e6373d !important; /* Cambia el color del borde */
+}
+
+.btn-primary:hover {
+  background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
+  border-color: #e6373d !important;
+}
+.add-to-cart:active {
+  border: 2px solid rgb(14, 12, 12) !important; /* Cambia este color al que prefieras */
+}
+
+
+/* Productos */
+.productos-header {
+  background-image: linear-gradient(rgba(107, 100, 100, 0.822), rgba(143, 135, 135, 0.377)),url('https://www.nuestratiendaartesanal.com/blogold/wp-content/uploads/2017/08/mochilas-tejidas-wayuu.jpg');
+  background-size: cover; 
+  background-position: center; 
+  padding: 50px 0;
+}
+
+.baner {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold; 
+}
+
+.card-img-top {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+
+.text-truncate{
+  margin-bottom: 2%;
+}
+.text-muted{
+  margin-bottom: 2%;
+}
+
+
+/* estilos del contador del carrito */
+#cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  background-color: #f7ffff; /* Color de fondo del contador */
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* estilos infotmacion de producto sweetalert */
+#swal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#swal-content img.swal-img {
+  width: 50%; /* Ajusta el ancho */
+  height: 22rem; /* Mantiene la proporción */
+  float: left;
+  margin-right: 10px;
+}
+
+#swal-content .info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 50%;
+}
+
+#swal-content button {
+  
+  margin-top: 10px;
+  text-align: center;
+}
+/* Estilos para pantallas pequeñas informacion de producto*/
+@media (max-width: 700px) {
+  #swal-content {
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  #swal-content img.swal-img {
+    width: 100%; /* La imagen ocupa el 100% del ancho en pantallas pequeñas */
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen del texto */
+  }
+
+  #swal-content .info {
+    max-width: 100%; /* El contenido ocupa el 100% del ancho en pantallas pequeñas */
+  }
+
+  #swal-content button {
+    width: 100%; /* El botón ocupa el 100% del ancho en pantallas pequeñas */
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding-top: 13%;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    padding-top: 5%;
+  }
+}
