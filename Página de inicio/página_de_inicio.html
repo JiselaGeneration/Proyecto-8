@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de inicio</title>
-    <link rel="icon" href="../Navbar/img/logo.png" type="image/png">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet" />
-    <link href="./pagina_de_inicio.css" rel="stylesheet" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de inicio</title>
+  <link rel="icon" href="../Navbar/img/logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link href="./pagina_de_inicio.css" rel="stylesheet" />
+</head>
+
+<body>
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
@@ -69,224 +70,231 @@
     </div>
   </nav>
 
-    <!-- Banner: Carrusel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://via.placeholder.com/1200x500"
-            class="d-block w-100"
-            alt="Banner 1"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Bienvenidos</h5>
-            <p>Descubre lo mejor de nuestra cultura y tradición.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://via.placeholder.com/1200x500"
-            class="d-block w-100"
-            alt="Banner 2"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Explora Nuestros Productos</h5>
-            <p>Conecta con las raíces de Colombia.</p>
-          </div>
+  <!-- Banner: Carrusel -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/VT6WUDTNBJCG5IFUROUVHVPSH4.jpg" class="d-block w-100" alt="Banner 1">
+        <div class="carousel-caption d-block">
+          <h5>Bienvenidos</h5>
+          <p>Descubre lo mejor de nuestra cultura y tradición.</p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
+      <div class="carousel-item">
+        <img src="https://mexicorutamagica.mx/wp-content/uploads/2021/03/dulces-tipicos-de-colombia.jpg" class="d-block w-100" alt="Banner 2">
+        <div class="carousel-caption d-block">
+          <h5>Nuestros Productos</h5>
+          <p>Conecta con las raíces de Colombia.</p>
+        </div>
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
 
-    <!-- Productos Más Vendidos -->
-    <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Productos Más Vendidos</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200"
-                class="card-img-top"
-                alt="Producto 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Producto 1</h5>
-                <p class="card-text">Descripción breve del producto 1.</p>
-                <p class="card-text"><strong>$50.000</strong></p>
+  <!-- Productos Más Vendidos -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Productos Más Vendidos</h2>
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slides" id="carouselSlides">
+            <!-- Tarjetas de productos generadas dinámicamente -->
+          </div>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+      <a href="../Productos/productos.html" class="btn btn-primary mt-4">Ver todos los productos</a>
+    </div>
+  </section>
+
+  <!-- Comunidad -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Nuestra Comunidad</h2>
+      <div class="row align-items-center">
+        <!-- Columna para el texto (título, descripción y correo) -->
+        <div class="col-md-6">
+          <p>
+            Somos un grupo comprometido con la difusión de las artesanías colombianas,
+            promoviendo el trabajo de nuestros artesanos locales en todo el mundo.
+          </p>
+          <p><strong>Correo: </strong>Tesorosdemitierra2025@gmail.com</p>
+          <a href="../SobreNosotros/SobreNosotros.html" class="btn btn-primary">Conócenos</a>
+        </div>
+        <!-- Columna para el video -->
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OgOoMFvli1c?si=xZhXKWB13EWqrheD"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regiones -->
+  <section class="py-5 ">
+    <div class="container text-center">
+      <div class="section-header mb-4">
+        <h2 class="section-header-title text-primary">Productos de todas las Regiones de Colombia</h2>
+
+        <h4 class="section-header-subtitle">Descubre lo mejor de cada región de Colombia.</h4>
+      </div>
+
+      <div class="row g-4">
+        <!-- Región Andina -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-andina">
+              <div class="collection-thumb-img-wrap">
+                <img
+                  src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/UYR6MC5HEZED3NQPF4D45HWHCA.jpg"
+                  class="img-fluid rounded" alt="Región Andina">
               </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Andina</h5>
             </div>
           </div>
-          <!-- Más tarjetas de productos aquí -->
         </div>
-        <a href="#seccion-productos" class="btn btn-primary mt-4">Ver Todo</a>
-      </div>
-    </section>
 
-    <!-- Nuestros Productos -->
-    <section id="seccion-productos" class="py-5 bg-light">
-      <div class="container text-center">
-        <h2 class="mb-4">Nuestros Productos</h2>
-        <div class="row g-4">
-          <!-- Tarjetas de productos (similar a productos más vendidos, con otro diseño o estilo) -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Comunidad -->
-    <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Nuestra Comunidad</h2>
-        <div class="ratio ratio-16x9">
-          <iframe
-            src="https://www.youtube.com/embed/3jWRrafhO7M"
-            title="YouTube video"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Regiones -->
-    <section class="py-5 bg-light">
-        <div class="container text-center">
-            <div class="section-header mb-4">
-                <h2 class="section-header-title text-primary">Explora las Regiones de Colombia</h2>
-                <img src="https://via.placeholder.com/100x20" alt="Separador" class="my-2">
-                <h4 class="section-header-subtitle">Descubre lo mejor de cada región.</h4>
+        <!-- Región Caribe -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-caribe">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://encolombia.com/wp-content/uploads/2020/05/Regi%C3%B3n-Caribe-en-Colombia.jpg"
+                  class="img-fluid rounded" alt="Región Caribe">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Caribe</h5>
             </div>
-    
-            <div class="row g-4">
-                <!-- Región Andina -->
-                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-                    <div class="collection-thumb">
-                        <a class="collection-thumb-link" href="#region-andina">
-                            <div class="collection-thumb-img-wrap">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded" alt="Región Andina">
-                            </div>
-                        </a>
-                        <div class="collection-thumb-caption">
-                            <h5 class="collection-thumb-title mt-3">Región Andina</h5>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Región Caribe -->
-                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-                    <div class="collection-thumb">
-                        <a class="collection-thumb-link" href="#region-caribe">
-                            <div class="collection-thumb-img-wrap">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded" alt="Región Caribe">
-                            </div>
-                        </a>
-                        <div class="collection-thumb-caption">
-                            <h5 class="collection-thumb-title mt-3">Región Caribe</h5>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Región Pacífica -->
-                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-                    <div class="collection-thumb">
-                        <a class="collection-thumb-link" href="#region-pacifica">
-                            <div class="collection-thumb-img-wrap">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded" alt="Región Pacífica">
-                            </div>
-                        </a>
-                        <div class="collection-thumb-caption">
-                            <h5 class="collection-thumb-title mt-3">Región Pacífica</h5>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Región Amazónica -->
-                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-                    <div class="collection-thumb">
-                        <a class="collection-thumb-link" href="#region-amazonica">
-                            <div class="collection-thumb-img-wrap">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded" alt="Región Amazónica">
-                            </div>
-                        </a>
-                        <div class="collection-thumb-caption">
-                            <h5 class="collection-thumb-title mt-3">Región Amazónica</h5>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Región Orinoquía -->
-                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-                    <div class="collection-thumb">
-                        <a class="collection-thumb-link" href="#region-orinoquia">
-                            <div class="collection-thumb-img-wrap">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded" alt="Región Orinoquía">
-                            </div>
-                        </a>
-                        <div class="collection-thumb-caption">
-                            <h5 class="collection-thumb-title mt-3">Región Orinoquía</h5>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Región Insular -->
-                <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
-                    <div class="collection-thumb">
-                        <a class="collection-thumb-link" href="#region-insular">
-                            <div class="collection-thumb-img-wrap">
-                                <img src="https://via.placeholder.com/200x200" class="img-fluid rounded" alt="Región Insular">
-                            </div>
-                        </a>
-                        <div class="collection-thumb-caption">
-                            <h5 class="collection-thumb-title mt-3">Región Insular</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Nosotros -->
-    <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Sobre Nosotros</h2>
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img
-              src="https://via.placeholder.com/500x300"
-              alt="Nosotros"
-              class="img-fluid"
-            />
           </div>
-          <div class="col-md-6">
-            <p>
-              Somos una empresa comprometida con mostrar lo mejor de nuestra
-              tierra, conectando a nuestros clientes con la cultura colombiana a
-              través de nuestros productos.
-            </p>
-            <a href="#sobre-nosotros" class="btn btn-primary">Ver Más</a>
+        </div>
+
+        <!-- Región Pacífica -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-pacifica">
+              <div class="collection-thumb-img-wrap">
+                <img
+                  src="https://colombiatours.travel/wp-content/uploads/2017/07/Nuqui-Choco-Pacifico-Colombiano-Planes-Tur%C3%ADsticos-ColombiaTours-1.jpeg"
+                  class="img-fluid rounded" alt="Región Pacífica">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Pacífica</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Amazónica -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-amazonica">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/BCLY46GTORCJXNF5SQDBXZKYEE.jpg"
+                  class="img-fluid rounded" alt="Región Amazónica">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Amazónica</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Orinoquía -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-orinoquia">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKIxtRhq36g_rMmfr5a4Ab-bwYZl7Tu-ppyQ&s"
+                  class="img-fluid rounded" alt="Región Orinoquía">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Orinoquía</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Insular -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-insular">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://blogs.eltiempo.com/para-donde-va/wp-content/uploads/sites/371/2015/05/SANANDRES2.jpg"
+                  class="img-fluid rounded" alt="Región Insular">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Insular</h5>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+      <a href="../Productos/productos.html" class="btn btn-primary">Ver productos</a>
+    </div>
+  </section>
 
-      <!-- Footer -->
+  <!-- Nosotros -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Sobre Nosotros</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://colombia.co/sites/default/files/articles/artesanias-3-1.jpg" alt="Nosotros"
+            class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+          <p>
+            Somos una empresa comprometida con mostrar lo mejor de nuestra
+            tierra, conectando a nuestros clientes con la cultura colombiana a
+            través de nuestros productos.
+          </p>
+          <a href="../SobreNosotros/SobreNosotros.html" class="btn btn-primary">Sobre nosotros</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hacer parte -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+
+        <!-- Contenido del formulario -->
+        <div class="col-md-7">
+          <div class="newsletter-content text-center">
+            <h2 class="newsletter-title">Déjanos tu correo</h2>
+            <p>Recibe actualizaciones y noticias del mundo del café cada semana.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Tu correo electrónico" required>
+              <button type="submit">Suscribir</button>
+            </form>
+          </div>
+        </div>
+        <!-- Imagen a la izquierda en laptop, arriba en móvil -->
+        <div class="col-md-5 newsletter-img d-none d-md-block"></div>
+        <!-- Imagen para móviles -->
+        <div class="col-12 d-md-none newsletter-img mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
   <footer class="bg-light text-white pt-4">
     <div class="container">
       <div class="row">
@@ -305,11 +313,13 @@
           <ul class="list-unstyled">
             <li class="text-center"><a href="../Productos/productos.html"
                 class="text-white text-decoration-none">Productos</a></li>
-            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html" class="text-white text-decoration-none">Sobre
+            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html"
+                class="text-white text-decoration-none">Sobre
                 Nosotros</a></li>
             <li class="text-center"><a href="../Contactenos/contactenos.html"
                 class="text-white text-decoration-none">Contáctenos</a></li>
-            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi Cuenta</a></li>
+            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi
+                Cuenta</a></li>
           </ul>
         </div>
 
@@ -332,8 +342,19 @@
       </div>
     </div>
   </footer>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./pagina_de_inicio.js"></script>
-  </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../Carrito/carrito.js"></script>
+  <script src="./pagina_de_inicio.js"></script>
+</body>
+
 </html>
