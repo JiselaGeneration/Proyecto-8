@@ -20,35 +20,102 @@ class ProductsController {
     // Push the item to the items property
     this.items.push(item);
   }
+  // Método para formatear el precio
+  formatPrice(price) {
+    return `$ ${parseInt(price).toLocaleString('es-CO')}`;
+  }
 
   // Create the displayItems method
   displayItems() {
     const contenedorProductos = document.getElementById("productos");
-
+  
     this.items.forEach((producto) => {
       const productoHTML = `
-<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-    <div class="card h-100 shadow-sm border-0 rounded-lg overflow-hidden">
-        <img src="${producto.imageUrl}" class="card-img-top zoom-image" alt="${producto.name}">
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title text-truncate">${producto.name}</h5>
-            <p class="card-text text-muted">
-                <i class="bi bi-geo-alt"></i> ${producto.region}
-            </p>
-            <p class="card-text">
-                <i class="bi bi-currency-dollar"></i> <strong>${producto.price}</strong> 
-            </p>
-            <button class="add-to-cart btn btn-primary mt-auto d-flex justify-content-center align-items-center py-2 zoom-button" data-id=${producto.id} data-name=${producto.name} data-price=${producto.price} data-image=${producto.imageUrl}>Añadir al Carrito</button>
+        <div class="prod col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card h-100 shadow-sm border-0 rounded-lg overflow-hidden">
+                <img src="${producto.imageUrl}" class="card-img-top zoom-image producto-imagen" alt="${producto.name}" data-id="${producto.id}">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-truncate">${producto.name}</h5>
+                    <p class="card-text text-muted">
+                        <i class="bi bi-geo-alt"></i> ${producto.region}
+                    </p>
+                    <p class="card-text">
+                        <i class="bi bi-currency-dollar"></i> <strong>${this.formatPrice(producto.price)}</strong>
+                    </p>
+                    <button class="add-cart btn btn-primary mt-3" data-id="${producto.id}" data-name="${producto.name}" data-price="${producto.price}" data-image="${producto.imageUrl}">Añadir al Carrito</button>
+                </div>
+                
+            </div>
         </div>
-    </div>
-</div>
-
- `;
+      `;
       contenedorProductos.innerHTML += productoHTML;
     });
+  
+    // Añadir event listener a las imágenes
+    document.querySelectorAll('.prod .producto-imagen').forEach(img => {
+      img.addEventListener('click', (e) => {
+        const id = parseInt(e.target.dataset.id, 10);
+        const producto = this.items.find(item => item.id === id);
+        if (producto) {
+          Swal.fire({
+        
+            html: `
+            <div id="swal-content">
+              <img src="${producto.imageUrl}" alt="${producto.name}" class="swal-img"/>
+              <div class="info">
+                <h1>${producto.name}</h1>
+                <p><strong>  </strong> </p>
+                <p> ${producto.description}</p>
+                <p><strong>Región:</strong> ${producto.region}</p>
+                <p><strong>Precio:</strong> ${this.formatPrice(producto.price)}</p>
+                
+                <button class="add-to-cart btn btn-primary mt-3" data-id="${producto.id}" data-name="${producto.name}" data-price="${producto.price}" data-image="${producto.imageUrl}">Añadir al Carrito</button>
+              </div>
+            </div>
+              `,
+            showConfirmButton: false, // Oculta el botón de confirmación predeterminado
+            width: '50rem'
+          });
+  
+          // Añadir event listener al botón dentro de SweetAlert2
+          document.querySelector('.swal2-container .add-to-cart').addEventListener('click', (e) => {
+            const id = parseInt(e.target.dataset.id, 10);
+            const name = e.target.dataset.name;
+            const price = parseInt(e.target.dataset.price, 10);
+            const image = e.target.dataset.image;
+  
+            addToCart(id, name, price, image);
+            let timerInterval;
+            Swal.fire({
+              title: 'Producto agregado',
+              text: 'El producto ha sido agregado exitosamente al carrito.',
+              icon: 'success',
+              timer: 2000,
+              timerProgressBar: true,
+              didOpen: () => {
+                Swal.showLoading();
+                const timer = Swal.getPopup().querySelector("b");
+                timerInterval = setInterval(() => {
+                  timer.textContent = `${Swal.getTimerLeft()}`;
+                }, 100);
+              },
+              willClose: () => {
+                clearInterval(timerInterval);
+              }
+            }).then((result) => {
+              /* Read more about handling dismissals below */
+              if (result.dismiss === Swal.DismissReason.timer) {
+                console.log("I was closed by the timer");
+              }
+            });
+          });
+        }
+      });
+    });
   }
+  
+  
 }
-
 // Crear una instancia de ProductsController
 const productos = new ProductsController();
 
@@ -57,14 +124,14 @@ productos.addItem(
   "Sombrero vueltiao",
   "Es uno de los elementos más representativos de la cultura colombiana, tanto a nivel nacional como internacional. Este sombrero colombiano fue diseñado hace más de doscientos años.",
   "https://colombia.co/sites/default/files/inline-images/sombrero-vueltiao-colombiano.jpeg",
-  60200,
+  "60200",
   "Region caribe"
 );
 productos.addItem(
   "Queso de Paipa",
   "Oriundo de esa población boyacense, cuenta con el certificado de origen que respalda la producción artesanal de quesos semi-maduros, con sabor ácido y amargo suave, de aroma rancio y color amarillo pálido.",
   "https://colombia.co/sites/default/files/marca-pais/images/wp-content/uploads/2018/04/El-queso-paipa-es-uno-de-los-productos-colombianos-con-Sello-de-Denominacio%CC%81n-de-Origen-%E2%80%93-Queso-paipa-servido-en-tabla-de-madera-Marca-Pai%CC%81s-Colombia-.png",
-  25000,
+  "25000",
   "Region Andina"
 );
 productos.addItem(
@@ -147,8 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function updateCartCounter() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartCounter = document.getElementById("cart-counter");
-  cartCounter.textContent = cart.length;
+  cartCounter.textContent = cart.reduce((total, item) => total + item.quantity, 0);
 }
+
 
 // Agregar producto al carrito
 function addToCart(id, name, price, image) {
@@ -167,7 +235,7 @@ function addToCart(id, name, price, image) {
 
 // Manejar clic en botones de añadir al carrito
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("add-to-cart")) {
+  if (e.target.classList.contains("add-cart")) {
     const id = parseInt(e.target.dataset.id, 10);
     const name = e.target.dataset.name;
     const price = parseInt(e.target.dataset.price, 10);
@@ -208,3 +276,4 @@ document.addEventListener("click", (e) => {
     });
   }
 });
+

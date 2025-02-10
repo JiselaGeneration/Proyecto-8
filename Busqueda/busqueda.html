@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./productos.css" />
+  <link rel="stylesheet" href="./busqueda.css" />
   <title>Productos</title>
 </head>
 
@@ -39,7 +39,7 @@
         <a href="../Login/login.html" class="btn btn-outline-light border-transparent me-2">
           <i class="bi bi-person"></i>
         </a>
-        <a href="../Busqueda/busqueda.html" id="search-toggle" class="btn btn-outline-light border-transparent me-2">
+        <a href="./busqueda.html" id="search-toggle" class="btn btn-outline-light border-transparent me-2">
           <i class="bi bi-search"></i>
         </a>
         <!-- Icono del carrito con contador -->
@@ -74,8 +74,25 @@
   
   <!-- Sección productos -->
   <div class="productos-header">
-    <h1 class="text-center baner">PRODUCTOS</h1>
+    <h1 class="text-center baner">BUSQUEDA</h1>
   </div>
+
+<!-- Barra de búsqueda -->
+<!-- Barra de búsqueda -->
+<div class="container mt-4">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div class="d-flex">
+              <input id="search-input" class="form-control rounded-pill" type="search" placeholder="Buscar producto..." aria-label="Search">
+              <button id="search-btn" class="btn btn-outline-primary ms-2 rounded-pill">
+                  <i class="bi bi-search"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
   <div class="container my-5">
     <div id="productos" class="row">
       <!-- Los productos se mostrarán aquí -->
@@ -135,7 +152,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../Carrito/carrito.js"></script>
-  <script src="./ProductsController.js"></script>
+  <script src="./busqueda.js"></script>
 </body>
 
 </html>

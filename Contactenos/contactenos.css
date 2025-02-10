@@ -3,9 +3,16 @@ body {
   font-family: comic neue;
   padding-top: 70px;
 }
+
+@media (max-width: 60em) {
+  body {
+    padding-top: 50px;
+  }
+}
+
 /* navbar */
 .bg-light {
-  background-color: #e6373d !important; /* Cambia el color de fondo */
+  background-color: #e6373d !important;
   color: white;
 }
 
@@ -26,7 +33,6 @@ body {
   border-color: transparent !important;
 }
 
-/* Subrayado en hover */
 .hover-underline {
   position: relative;
   text-decoration: none;
@@ -36,7 +42,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; /* Espacio entre texto y subrayado */
+  bottom: -2px;
   width: 0;
   height: 2px;
   background-color: white;
@@ -44,30 +50,24 @@ body {
 }
 
 .hover-underline:hover::after {
-  width: 100%; /* Subraya completamente al pasar el mouse */
+  width: 100%;
 }
 
-/* Dropdown */
-.dropdown-menu {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  margin-top: 6px !important;
-  background-color: #e6373d !important; /* Cambia el color de fondo */
-  color: white;
+#cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  background-color: #f7ffff;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block; /* Muestra el dropdown */
-  opacity: 1; /* Totalmente visible */
-  visibility: visible;
-}
-
-.dropdown-item {
-  color: white;
-}
-
-.dropdown-item:hover {
-  color: white;
-  background-color: #e6373d;
+.card-title {
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 /* Contactenos */
@@ -77,45 +77,35 @@ body {
 }
 
 .btn-primary {
-  background-color: #e6373d !important; /* Cambia el color de fondo */
-  border-color: #e6373d !important; /* Cambia el color del borde */
-}
-
-.btn-primary:hover {
-  background-color: #e6373d !important; /* Cambia el color al pasar el cursor */
+  background-color: #e6373d !important;
   border-color: #e6373d !important;
 }
 
-#contacto{
-  background-color: #91928cce;
-  background-image:linear-gradient(rgba(212, 206, 206, 0.5), rgba(235, 225, 225, 0.377)), url("https://www.deturismoporcolombia.com/img/destinos/cartagena/cartagena-4-750x562.jpg");
-  background-size: cover;
-  padding: 15%;
+.btn-primary:hover {
+  background-color: #e6373d !important;
+  border-color: #e6373d !important;
 }
 
-.formulario{
+#contacto {
+  background-color: #91928cce;
+  background-image: linear-gradient(rgba(7, 5, 5, 0.493), rgba(12, 11, 11, 0.753)), url('https://www.deturismoporcolombia.com/img/destinos/cartagena/cartagena-4-750x562.jpg');
+  background-size: cover;
+  padding: 15%;
+  color: #f7ffff;
+}
+
+.formulario {
   background-color: #e5e2dbc0;
   padding: 5% 0%;
   border-radius: 2%;
 }
 
 @media (max-width: 30em) {
-  #contacto{
+  #contacto {
     padding: 5%;
   }
-  .container{
+
+  .container {
     padding: 5%;
   }
-}
-/* estilos del contador del carrito */
-#cart-counter {
-  position: absolute;
-  top: 10px;
-  right: 22px;
-  background-color: #f7ffff; /* Color de fondo del contador */
-  color: black;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  font-weight: bold;
 }

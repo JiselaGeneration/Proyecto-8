@@ -5,9 +5,9 @@ body {
 }
 
 /* navbar */
-.bg-dark {
+
+.bg-light {
   background-color: #e6373d !important;
-  /* Cambia el color de fondo */
   color: white;
 }
 
@@ -51,32 +51,6 @@ body {
   /* Subraya completamente al pasar el mouse */
 }
 
-/* Dropdown */
-.dropdown-menu {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  margin-top: 6px !important;
-  background-color: #e6373d !important;
-  /* Cambia el color de fondo */
-  color: white;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  /* Muestra el dropdown */
-  opacity: 1;
-  /* Totalmente visible */
-  visibility: visible;
-}
-
-.dropdown-item {
-  color: white;
-}
-
-.dropdown-item:hover {
-  color: white;
-  background-color: #e6373d;
-}
-
 /* estilos del contador del carrito */
 #cart-counter {
   position: absolute;
@@ -92,8 +66,6 @@ body {
 }
 
 
-
-/*  */
 /* Estilo general del carrito */
 .cart-item {
   background-color: #fff;
@@ -102,7 +74,9 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: space-between;
-  gap: 20px; /* Espacio entre los elementos */
+  gap: 20px;
+  width: 100%;
+  /* Espacio entre los elementos */
 }
 
 /* Estilo para la imagen y nombre del producto */
@@ -163,9 +137,14 @@ body {
 
 /* Responsividad para pantallas grandes (tablets y laptops) */
 @media (min-width: 768px) {
+  .carrito {
+    min-height: 43rem;
+  }
+
   .cart-item {
     padding: 20px 30px;
-    gap: 30px; /* Mayor espacio entre los elementos */
+    gap: 30px;
+    /* Mayor espacio entre los elementos */
   }
 
   .cart-item .d-flex {
@@ -187,9 +166,15 @@ body {
 
 /* Responsividad para pantallas pequeñas (móviles) */
 @media (max-width: 767px) {
+
+  .carrito {
+    min-height: 20rem;
+  }
+
   .cart-item {
     flex-direction: column;
-    gap: 20px; /* Aumenta el espacio entre elementos en dispositivos pequeños */
+    gap: 20px;
+    /* Aumenta el espacio entre elementos en dispositivos pequeños */
     padding: 15px;
   }
 
@@ -201,7 +186,8 @@ body {
 
   .cart-item .item-quantity-price {
     font-size: 1rem;
-    min-width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    min-width: 100%;
+    /* Asegura que ocupe todo el espacio disponible */
     text-align: center;
   }
 
@@ -217,9 +203,11 @@ body {
 
 /* Responsividad para pantallas medianas (laptops) */
 @media (max-width: 1024px) {
+
   .cart-item {
     flex-direction: row;
-    gap: 20px; /* Mantén un buen espacio entre los elementos */
+    gap: 20px;
+    /* Mantén un buen espacio entre los elementos */
     padding: 20px 30px;
   }
 
@@ -239,5 +227,11 @@ body {
 
   .cart-item .btn {
     width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carrito {
+    min-height: 25rem;
   }
 }

@@ -2,6 +2,21 @@ const cart = JSON.parse(localStorage.getItem("cart")) || [];
 const cartItemsContainer = document.querySelector("#cart-items");
 const totalPoints = document.querySelector("#total-points");
 const clearCartButton = document.querySelector("#clear-cart");
+function formatPrice(price) {
+    return `$ ${parseInt(price).toLocaleString('es-CO')}`;
+}
+
+// Función para actualizar el contador del carrito
+function updateCartCounter() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCounter = document.getElementById("cart-counter");
+    cartCounter.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+}
+
+// Llamar a la función para actualizar el contador al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+    updateCartCounter();
+});
 
 // Función para actualizar el carrito
 function updateCart() {
@@ -33,7 +48,7 @@ function updateCart() {
   </div>
 
   <div class="item-quantity-price text-center">
-    <span>${item.quantity} x $${item.price}</span>
+    <span>${item.quantity} x ${formatPrice(item.price)}</span>
   </div>
 
   <div class="d-flex align-items-center justify-content-center item-actions">
@@ -51,7 +66,7 @@ function updateCart() {
 
     // Calcular el total
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    totalPoints.textContent = `Total: $${total}`;
+    totalPoints.textContent = `Total: ${formatPrice(total)}`;
 
     // Almacenar el carrito en el Local Storage
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -61,6 +76,7 @@ function updateCart() {
 function clearCart() {
     cart.length = 0; // Vacía el array del carrito
     updateCart();
+    window.location.reload();
 }
 
 // Manejar clic en botones del carrito
@@ -74,6 +90,7 @@ document.addEventListener("click", (e) => {
         }
 
         updateCart();
+        window.location.reload();
     }
 
     if (e.target.classList.contains("increment")) {
@@ -85,6 +102,7 @@ document.addEventListener("click", (e) => {
         }
 
         updateCart();
+        window.location.reload();
     }
 
     if (e.target.classList.contains("decrement")) {
@@ -100,6 +118,7 @@ document.addEventListener("click", (e) => {
         }
 
         updateCart();
+        window.location.reload();
     }
 });
 
