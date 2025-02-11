@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (usuario) {
             // Verificar la contraseña
             if (usuario.password === password) {
-                window.location.href = "../Productos/productos.html";
+                window.location.href = "../MiCuenta/micuenta.html";
             } else {
                 document.getElementById('passwordError').textContent = 'Contraseña incorrecta. Inténtalo nuevamente.';
             }

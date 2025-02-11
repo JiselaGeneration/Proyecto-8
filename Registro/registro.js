@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
             // Mostrar un mensaje de éxito
-            alert("Registro exitoso. Los datos se han guardado en el Local Storage.");
+            // alert("Registro exitoso. Los datos se han guardado en el Local Storage.");
 
             // Limpiar el formulario
             form.reset();
