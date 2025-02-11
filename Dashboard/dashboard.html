@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="../Navbar/img/logo.png" type="image/png">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./contactenos.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./productos.css" />
-  <title>Productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link rel="icon" href="../Navbar/img/logo.png" type="image/png" />
 </head>
-
 <body>
-  <!-- Barra de navegación -->
+      <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
       <!-- Botón del menú hamburguesa -->
@@ -73,18 +63,67 @@
       </div>
     </div>
   </nav>
-  <!-- Sección productos -->
-  <div class="productos-header">
-    <h1 class="text-center baner">PRODUCTOS</h1>
-  </div>
-  <div class="container my-5">
-    <div id="productos" class="row">
-      <!-- Los productos se mostrarán aquí -->
+
+
+    <div class="container mt-5">
+        <!-- Título -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="text-center">INVENTARIO</h1>
+            <button class="btn btn-primary">Añadir producto</button>
+        </div>
+
+        <!-- Tabla -->
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de fila -->
+                <tr>
+                    <td>1</td>
+                    <td>Producto A</td>
+                    <td>$10.00</td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-sm btn-secondary me-1">-</button>
+                            <span>5</span>
+                            <button class="btn btn-sm btn-success ms-1">+</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1">Editar</button>
+                        <button class="btn btn-sm btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Producto B</td>
+                    <td>$15.00</td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-sm btn-secondary me-1">-</button>
+                            <span>300</span>
+                            <button class="btn btn-sm btn-success ms-1">+</button>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1">Editar</button>
+                        <button class="btn btn-sm btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-  </div>
-  
-  <!-- Footer -->
-  <footer class="bg-light text-white pt-4" id="footer">
+
+      <!-- Footer -->
+  <footer class="bg-light text-white pt-4">
     <div class="container">
       <div class="row">
         <!-- Columna 1: Sobre Nosotros -->
@@ -102,13 +141,11 @@
           <ul class="list-unstyled">
             <li class="text-center"><a href="../Productos/productos.html"
                 class="text-white text-decoration-none">Productos</a></li>
-            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html"
-                class="text-white text-decoration-none">Sobre
+            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html" class="text-white text-decoration-none">Sobre
                 Nosotros</a></li>
             <li class="text-center"><a href="../Contactenos/contactenos.html"
                 class="text-white text-decoration-none">Contáctenos</a></li>
-            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi
-                Cuenta</a></li>
+            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi Cuenta</a></li>
           </ul>
         </div>
 
@@ -132,18 +169,6 @@
     </div>
   </footer>
 
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="../Carrito/carrito.js"></script>
-  <script src="./ProductsController.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

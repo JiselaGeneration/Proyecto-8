@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Cuenta</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="../Navbar/img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="./micuenta.css">
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <!-- Botón del menú hamburguesa -->
+      <nav class="navbar navbar-dark">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+      <!-- Logo -->
+      <a class="navbar-brand d-none d-lg-block" href="../Página de inicio/página_de_inicio.html">
+        <img src="../Navbar/img/logo.png" alt="Tesoros de mi tierra" width="100" />
+      </a>
+
+      <!-- Íconos adicionales -->
+      <div class="d-flex order-lg-3">
+        <a href="../Login/login.html" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-person"></i>
+        </a>
+        <a href="../Busqueda/busqueda.html" id="search-toggle" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-search"></i>
+        </a>
+        <!-- Icono del carrito con contador -->
+        <div class="carrito-icono-container">
+          <a href="../Carrito/carrito.html"
+            class="carrito-icono-container btn btn-outline-light border-transparent me-2">
+            <i class="bi bi-cart"></i>
+            <span id="cart-counter">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Página de inicio/página_de_inicio.html">INICIO</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../SobreNosotros/SobreNosotros.html">SOBRE NOSOTROS</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Productos/productos.html">PRODUCTOS</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Contactenos/contactenos.html">CONTACTENOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Contenido principal -->
+  <div class="flex">
+    <!-- Barra lateral -->
+    <div class="sidebar">
+      <h4><img src="/Proyecto-8/MiCuenta/Imagenes/settings_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""><strong>Configuración</strong></h4>
+      <a href="#datos-personales" class="nav-link nav-item hover-underline">Datos Personales</a>
+      <a href="#metodo-pago" class="nav-link nav-item hover-underline">Método de Pago</a>
+      <a href="#contraseña" class="nav-link nav-item hover-underline">Contraseña</a>
+      <a href="#pedidos" class="nav-link nav-item hover-underline">Pedidos</a>
+      <a href="#productos-favoritos" class="nav-link nav-item hover-underline">Productos Favoritos</a>
+    </div>
+    <!-- Contenido -->
+    <div class="content">
+
+      <div class="card">
+        <h3 class="text-center"><strong>Configuración de Cuenta</strong></h3>
+
+        <!-- Datos Personales -->
+        <section id="datos-personales">
+          <h4 class="sub-titulo"><strong><em>Datos Personales</em></strong></h4>
+          <div class="mb-3">
+            <label class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" placeholder="Ingrese su nombre completo">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" placeholder="Ingrese su correo electrónico">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" placeholder="Ingrese su número de teléfono">
+          </div>
+        </section>
+
+        <!-- Método de Pago -->
+        <section id="metodo-pago">
+          <h4 class="sub-titulo"><strong><em>Método de Pago</em></strong></h4>
+          <div class="mb-3">
+            <label class="form-label">Número de Tarjeta</label>
+            <input type="text" class="form-control" placeholder="Ingrese su número de tarjeta">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Fecha de Expiración</label>
+            <input type="text" class="form-control" placeholder="MM/AA">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Código CVV</label>
+            <input type="password" class="form-control" placeholder="Ingrese CVV">
+          </div>
+        </section>
+
+        <!-- Contraseña -->
+        <section id="contraseña">
+          <h4 class="sub-titulo"><strong><em>Cambiar Contraseña</em></strong></h4>
+          <div class="mb-3">
+            <label class="form-label">Contraseña Actual</label>
+            <input type="password" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Nueva Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+        </section>
+
+        <!-- Pedidos -->
+        <section id="pedidos">
+          <h4 class="sub-titulo"><strong><em>Historial de Pedidos</em></strong></h4>
+          <p>Aquí aparecerán sus pedidos recientes.</p>
+        </section>
+
+        <!-- Productos Favoritos -->
+        <section id="productos-favoritos">
+          <h4 class="sub-titulo"><strong><em>Productos Favoritos</em></strong></h4>
+          <p>Aquí puedes ver tus productos favoritos.</p>
+        </section>
+
+        <!-- Botón Guardar Cambios -->
+        <button type="submit" class="btn btn-success btn-custom mt-4">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./micuenta.js"></script>
+</body>
+
+</html>

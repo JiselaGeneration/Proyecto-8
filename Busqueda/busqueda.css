@@ -1,13 +1,12 @@
 body {
   color: #21221c;
-  /* font-family: ; */
+  /* font-family: comic neue; */
   padding-top: 70px;
 }
 /* navbar */
 .bg-light {
-  background-color: #BF0413 !important;
-  /* Cambia el color de fondo */
-  color: white;
+  background-color: #BF0413 !important; /* Cambia el color de fondo */
+  color: white ;
 }
 
 .nav-link {
@@ -175,7 +174,6 @@ body {
     padding-top: 5%;
   }
 }
-
 #footer {
   background-color: rgba(0, 0, 0, 0.712) !important;
 }

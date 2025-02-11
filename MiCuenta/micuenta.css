@@ -1,0 +1,328 @@
+body {
+  color: #21221c;
+  /* font-family: comic neue; */
+  padding-top: 70px;
+}
+
+/* navbar */
+.bg-light {
+  background-color:#BF0413 !important;
+  /* Cambia el color de fondo */
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+/* Iconos */
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.border-transparent:hover {
+  border-color: transparent !important;
+}
+
+/* Subrayado en hover */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  /* Espacio entre texto y subrayado */
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+  /* Subraya completamente al pasar el mouse */
+}
+
+.sidebar a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 32px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 10px 10px 32px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 32px 3px rgba(0, 0, 0, 0.15);
+}
+
+.btn-custom {
+  width: 18%;
+  font-size: 1rem;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.btn.btn-success.btn-custom.mt-4 {
+  background-color: #21221c !important;
+  border-color: #21221c !important;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* opcional si quieres un ancho completo */
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.btn.btn-success.btn-custom.mt-4:hover {
+  background-color: #635c5c !important;
+  border-color: #21221c !important;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+/* Efecto visual al resaltar una sección */
+.highlight {
+  animation: glow 3s ease-out;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+@keyframes glow {
+  0% {
+    background-color: rgba(219, 40, 46, 0.1);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.text-center {
+  font-size: 30px;
+}
+
+.sub-titulo {
+  font-size: 20px;
+}
+
+
+
+/* Contenedor principal para ajustar flexbox */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  margin-left: 450px;
+  /* Alinear contenido cuando la barra está presente */
+  margin-right: 150px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  flex: 1;
+}
+
+/* Barra lateral fija en pantalla completa */
+.sidebar {
+  background-color: #bf0414e7;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  width: 250px;
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+/* Botón de menú para dispositivos pequeños */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #e6373d;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Ocultar barra lateral en pantallas pequeñas */
+@media (max-width: 834px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    /* Usar todo el ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+}
+
+/* Mostrar la barra lateral si está abierta */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+@media (max-width: 834px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    /* Usar todo el ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  /* Ocultar la barra lateral */
+  .sidebar {
+    display: none;
+  }
+
+  /* Mostrar el botón del menú */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #e6373d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 20px;
+    z-index: 1000;
+  }
+
+  /* Alinear el contenido principal */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 15.8px;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  /* Ajustar el formulario */
+  form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* Ajustar el tamaño de la tarjeta */
+  .card {
+    width: 100%;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Ocultar la barra lateral */
+  .sidebar {
+    display: none;
+  }
+
+  /* Mostrar botón del menú */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #e6373d;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 24px;
+    z-index: 1000;
+  }
+
+  /* Alinear el contenido principal */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 15.8px;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  /* Ajustar el formulario */
+  form {
+    width: 90%;
+    /* Tamaño adecuado para pantallas más amplias */
+    padding: 20px;
+  }
+
+  /* Ajustar la tarjeta */
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+ 
+
+}
+#footer {
+  background-color: rgba(0, 0, 0, 0.712) !important;
+}
