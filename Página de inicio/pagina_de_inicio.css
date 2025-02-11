@@ -1,181 +1,199 @@
 body {
-    color: #21221c;
-    font-family: comic neue;
-    padding-top: 70px;
-  }
-  
-  @media (max-width: 60em) {
-    body {
-      padding-top: 50px;
-    }
-  }
-  
-.bg-light {
-    background-color: #e6373d !important; /* Cambia el color de fondo */
-    color: white;
-  }
-  
-  .nav-link {
-    color: white;
-  }
-  
-  .nav-item :hover {
-    color: white;
-  }
-  
-  /* Iconos */
-  .border-transparent {
-    border-color: transparent !important;
-  }
-  
-  .border-transparent:hover {
-    border-color: transparent !important;
-  }
-  
-  /* Subrayado en hover */
-  .hover-underline {
-    position: relative;
-    text-decoration: none;
-  }
-  
-  .hover-underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Espacio entre texto y subrayado */
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease;
-  }
-  
-  .hover-underline:hover::after {
-    width: 100%; /* Subraya completamente al pasar el mouse */
-  }
+  color: #21221c;
+  font-family: comic neue;
+  padding-top: 70px;
+}
 
-  /* estilos del contador del carrito */
-  #cart-counter {
-    position: absolute;
-    top: 10px;
-    right: 22px;
-    background-color: #f7ffff; /* Color de fondo del contador */
-    color: black;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
+@media (max-width: 60em) {
+  body {
+    padding-top: 50px;
   }
-  
+}
+
+.bg-light {
+  background-color: #69292b !important;
+  /* Cambia el color de fondo */
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+/* Iconos */
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.border-transparent:hover {
+  border-color: transparent !important;
+}
+
+/* Subrayado en hover */
+.hover-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  /* Espacio entre texto y subrayado */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+  /* Subraya completamente al pasar el mouse */
+}
+
+/* estilos del contador del carrito */
+#cart-counter {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  background-color: #f7ffff;
+  /* Color de fondo del contador */
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 
 /* Animaciones generales */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo para las tarjetas */
 .collection-thumb {
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .collection-thumb:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .collection-thumb-img-wrap img {
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 .collection-thumb-img-wrap img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .collection-thumb-title {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 
 
-    /* Ajuste del tamaño del banner en laptop */
-    #carouselExample .carousel-item {
-      position: relative;
-      height: 60vh; /* Altura reducida en laptop */
-    }
+/* Ajuste del tamaño del banner en laptop */
+#carouselExample .carousel-item {
+  position: relative;
+  height: 60vh;
+  /* Altura reducida en laptop */
+}
 
-    /* Fondo oscuro sobre la imagen */
-    .carousel-item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
-      z-index: 1;
-    }
+/* Fondo oscuro sobre la imagen */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.692);
+  /* Fondo negro con opacidad */
+  z-index: 1;
+}
 
-    /* Ajuste de la imagen */
-    .carousel-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+/* Ajuste de la imagen */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    /* Ajuste de textos */
-    .carousel-caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 2; /* Para que el texto esté encima del overlay */
-    }
+/* Ajuste de textos */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  /* Para que el texto esté encima del overlay */
+}
 
-    .carousel-caption h5 {
-      font-size: 3rem; /* Texto más grande */
-      font-weight: bold;
-      color: white;
-    }
+.carousel-caption h5 {
+  font-size: 3rem;
+  /* Texto más grande */
+  font-weight: bold;
+  color: white;
+}
 
-    .carousel-caption p {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: white;
-    }
+.carousel-caption p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
 
-    /* Ajustes responsivos */
-    @media (max-width: 768px) {
-      #carouselExample .carousel-item {
-        height: 70vh;
-      }
-      .carousel-caption h5 {
-        font-size: 2.5rem;
-      }
-      .carousel-caption p {
-        font-size: 1.2rem;
-      }
-    }
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  #carouselExample .carousel-item {
+    height: 70vh;
+  }
 
-    @media (max-width: 480px) {
-      #carouselExample .carousel-item {
-        height: 50vh;
-      }
-      .carousel-caption h5 {
-        font-size: 2rem;
-      }
-      .carousel-caption p {
-        font-size: 1rem;
-      }
-    }
+  .carousel-caption h5 {
+    font-size: 2.5rem;
+  }
 
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+}
 
+@media (max-width: 480px) {
+  #carouselExample .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel-caption h5 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+#vendidos{
+  background-color: #f79b9e52
+}
+
+#nosotros{
+  background-color: #f79b9e52
+}
 
 /* Contenedor principal del carrusel */
 .carousel-container {
@@ -212,7 +230,8 @@ body {
 
 /* 🏷️ Tarjeta de producto */
 .carousel-slide {
-  flex: 0 0 calc(100% / 3 - 15px); /* Laptop: 3 tarjetas */
+  flex: 0 0 calc(100% / 3 - 15px);
+  /* Laptop: 3 tarjetas */
   background: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -273,7 +292,7 @@ body {
   transition: transform 0.3s ease;
   width: 100%;
   height: 200px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .card-img-top:hover {
@@ -281,10 +300,11 @@ body {
 }
 
 
-.text-truncate{
+.text-truncate {
   margin-bottom: 2%;
 }
-.text-muted{
+
+.text-muted {
   margin-bottom: 2%;
 }
 
@@ -297,8 +317,10 @@ body {
 }
 
 #swal-content img.swal-img {
-  width: 50%; /* Ajusta el ancho */
-  height: 22rem; /* Mantiene la proporción */
+  width: 50%;
+  /* Ajusta el ancho */
+  height: 22rem;
+  /* Mantiene la proporción */
   float: left;
   margin-right: 10px;
 }
@@ -310,30 +332,36 @@ body {
 }
 
 #swal-content button {
-  
+
   margin-top: 10px;
   text-align: center;
 }
+
 /* Estilos para pantallas pequeñas informacion de producto*/
 @media (max-width: 700px) {
   #swal-content {
-    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas pequeñas */
     align-items: center;
   }
 
   #swal-content img.swal-img {
-    width: 100%; /* La imagen ocupa el 100% del ancho en pantallas pequeñas */
+    width: 100%;
+    /* La imagen ocupa el 100% del ancho en pantallas pequeñas */
     height: auto;
     margin-right: 0;
-    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen del texto */
+    margin-bottom: 10px;
+    /* Añade un margen inferior para separar la imagen del texto */
   }
 
   #swal-content .info {
-    max-width: 100%; /* El contenido ocupa el 100% del ancho en pantallas pequeñas */
+    max-width: 100%;
+    /* El contenido ocupa el 100% del ancho en pantallas pequeñas */
   }
 
   #swal-content button {
-    width: 100%; /* El botón ocupa el 100% del ancho en pantallas pequeñas */
+    width: 100%;
+    /* El botón ocupa el 100% del ancho en pantallas pequeñas */
     margin-top: 10px;
   }
 }
@@ -350,30 +378,37 @@ body {
   }
 }
 
-
+#regiones{
+  background-color: #f8f9fa;
+}
 
 .newsletter-section {
   background-color: #f8f9fa;
   padding: 50px 0;
 }
+
 .newsletter-img {
   background: url('https://latiendadelcafe.co/cdn/shop/files/foto-tarjeta.jpg?v=1645824149') no-repeat center center;
   background-size: cover;
   min-height: 300px;
 }
+
 .newsletter-content {
   padding: 40px;
 }
+
 .newsletter-title {
   font-size: 2rem;
   font-weight: bold;
 }
+
 .newsletter-form input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .newsletter-form button {
   width: 100%;
   background-color: #007bff;
@@ -383,14 +418,15 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .newsletter-form button:hover {
   background-color: #0056b3;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: darkcyan;
 }
 
-#footer{
+#footer {
   background-color: rgba(0, 0, 0, 0.651) !important;
 }
