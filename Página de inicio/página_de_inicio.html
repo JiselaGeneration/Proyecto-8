@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de inicio</title>
+  <link rel="icon" href="../Navbar/img/logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link href="./pagina_de_inicio.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <!-- Botón del menú hamburguesa -->
+      <nav class="navbar navbar-dark">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+      <!-- Logo -->
+      <a class="navbar-brand d-none d-lg-block" href="../Página de inicio/página_de_inicio.html">
+        <img src="../Navbar/img/logo.png" alt="Tesoros de mi tierra" width="100" />
+      </a>
+
+      <!-- Íconos adicionales -->
+      <div class="d-flex order-lg-3">
+        <a href="../Login/login.html" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-person"></i>
+        </a>
+        <a href="../Busqueda/busqueda.html" id="search-toggle" class="btn btn-outline-light border-transparent me-2">
+          <i class="bi bi-search"></i>
+        </a>
+        <!-- Icono del carrito con contador -->
+        <div class="carrito-icono-container">
+          <a href="../Carrito/carrito.html"
+            class="carrito-icono-container btn btn-outline-light border-transparent me-2">
+            <i class="bi bi-cart"></i>
+            <span id="cart-counter">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Página de inicio/página_de_inicio.html">INICIO</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../SobreNosotros/SobreNosotros.html">SOBRE NOSOTROS</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Productos/productos.html">PRODUCTOS</a>
+          </li>
+          <li class="nav-item hover-underline">
+            <a class="nav-link" href="../Contactenos/contactenos.html">CONTACTENOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner: Carrusel -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/VT6WUDTNBJCG5IFUROUVHVPSH4.jpg"
+          class="d-block w-100" alt="Banner 1">
+        <div class="carousel-caption d-block">
+          <h5>Bienvenidos</h5>
+          <p>Descubre lo mejor de nuestra cultura y tradición.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://mexicorutamagica.mx/wp-content/uploads/2021/03/dulces-tipicos-de-colombia.jpg"
+          class="d-block w-100" alt="Banner 2">
+        <div class="carousel-caption d-block">
+          <h5>Nuestros Productos</h5>
+          <p>Conecta con las raíces de Colombia.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <!-- Productos Más Vendidos -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Productos Más Vendidos</h2>
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slides" id="carouselSlides">
+            <!-- Tarjetas de productos generadas dinámicamente -->
+          </div>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+      <a href="../Productos/productos.html" class="btn btn-primary mt-4">Ver todos los productos</a>
+    </div>
+  </section>
+
+  <!-- Comunidad -->
+  <section class="py-5" id="vendidos">
+    <div class="container text-center">
+      <h2 class="mb-4">Nuestra Comunidad</h2>
+      <div class="row align-items-center">
+        <!-- Columna para el texto (título, descripción y correo) -->
+        <div class="col-md-6">
+          <p>
+            Somos un grupo comprometido con la difusión de las artesanías colombianas,
+            promoviendo el trabajo de nuestros artesanos locales en todo el mundo.
+          </p>
+          <p><strong>Correo: </strong>Tesorosdemitierra2025@gmail.com</p>
+          <a href="../SobreNosotros/SobreNosotros.html" class="btn btn-primary">Conócenos</a>
+        </div>
+        <!-- Columna para el video -->
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OgOoMFvli1c?si=xZhXKWB13EWqrheD"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regiones -->
+  <section class="py-5" id="regiones">
+    <div class="container text-center">
+      <div class="section-header mb-4">
+        <h2 class="section-header-title">Productos de todas las Regiones de Colombia</h2>
+
+        <h4 class="section-header-subtitle">Descubre lo mejor de cada región de Colombia.</h4>
+      </div>
+
+      <div class="row g-4">
+        <!-- Región Andina -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-andina">
+              <div class="collection-thumb-img-wrap">
+                <img
+                  src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/UYR6MC5HEZED3NQPF4D45HWHCA.jpg"
+                  class="img-fluid rounded" alt="Región Andina">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Andina</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Caribe -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-caribe">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://encolombia.com/wp-content/uploads/2020/05/Regi%C3%B3n-Caribe-en-Colombia.jpg"
+                  class="img-fluid rounded" alt="Región Caribe">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Caribe</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Pacífica -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-pacifica">
+              <div class="collection-thumb-img-wrap">
+                <img
+                  src="https://colombiatours.travel/wp-content/uploads/2017/07/Nuqui-Choco-Pacifico-Colombiano-Planes-Tur%C3%ADsticos-ColombiaTours-1.jpeg"
+                  class="img-fluid rounded" alt="Región Pacífica">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Pacífica</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Amazónica -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-amazonica">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/semana/BCLY46GTORCJXNF5SQDBXZKYEE.jpg"
+                  class="img-fluid rounded" alt="Región Amazónica">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Amazónica</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Orinoquía -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-orinoquia">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKIxtRhq36g_rMmfr5a4Ab-bwYZl7Tu-ppyQ&s"
+                  class="img-fluid rounded" alt="Región Orinoquía">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Orinoquía</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Región Insular -->
+        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+          <div class="collection-thumb">
+            <a class="collection-thumb-link" href="#region-insular">
+              <div class="collection-thumb-img-wrap">
+                <img src="https://blogs.eltiempo.com/para-donde-va/wp-content/uploads/sites/371/2015/05/SANANDRES2.jpg"
+                  class="img-fluid rounded" alt="Región Insular">
+              </div>
+            </a>
+            <div class="collection-thumb-caption">
+              <h5 class="collection-thumb-title mt-3">Región Insular</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../Productos/productos.html" class="btn btn-primary">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section class="py-5" id="nosotros">
+    <div class="container text-center">
+      <h2 class="mb-4">Sobre Nosotros</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://colombia.co/sites/default/files/articles/artesanias-3-1.jpg" alt="Nosotros"
+            class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+          <p>
+            Somos una empresa comprometida con mostrar lo mejor de nuestra
+            tierra, conectando a nuestros clientes con la cultura colombiana a
+            través de nuestros productos.
+          </p>
+          <a href="../SobreNosotros/SobreNosotros.html" class="btn btn-primary">Sobre nosotros</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hacer parte -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+
+        <!-- Contenido del formulario -->
+        <div class="col-md-7">
+          <div class="newsletter-content text-center">
+            <h2 class="newsletter-title">Déjanos tu correo</h2>
+            <p>Recibe actualizaciones y noticias del mundo del café cada semana.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Tu correo electrónico" required>
+              <button class="btn-primary" type="submit">Suscribir</button>
+            </form>
+          </div>
+        </div>
+        <!-- Imagen a la izquierda en laptop, arriba en móvil -->
+        <div class="col-md-5 newsletter-img d-none d-md-block"></div>
+        <!-- Imagen para móviles -->
+        <div class="col-12 d-md-none newsletter-img mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-light text-white pt-4" id="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Columna 1: Sobre Nosotros -->
+        <div class="col-md-4 mb-3">
+          <h5 class="card-title fw-bold text-center">Sobre Nosotros</h5>
+          <p>
+            Somos una empresa dedicada a ofrecer los mejores productos tradicionales y artesanías de nuestra tierra.
+            Creemos en la calidad y autenticidad de cada artículo que ofrecemos.
+          </p>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="col-md-4 mb-3">
+          <h5 class="card-title fw-bold text-center">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="text-center"><a href="../Productos/productos.html"
+                class="text-white text-decoration-none">Productos</a></li>
+            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html"
+                class="text-white text-decoration-none">Sobre
+                Nosotros</a></li>
+            <li class="text-center"><a href="../Contactenos/contactenos.html"
+                class="text-white text-decoration-none">Contáctenos</a></li>
+            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi
+                Cuenta</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div class="col-md-4 mb-3">
+          <h5 class="card-title fw-bold text-center">Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt"></i> Dirección: Calle 123, Bogotá, Colombia</li>
+            <li><i class="bi bi-telephone"></i> Teléfono: +57 123 456 7890</li>
+            <li><i class="bi bi-envelope"></i> <strong>Email:</strong> Tesorosdemitierra2025@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-light">
+
+      <!-- Derechos reservados -->
+      <div class="text-center">
+        <p class="mb-0">© 2025 Tesoros de mi Tierra. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../Carrito/carrito.js"></script>
+  <script src="./pagina_de_inicio.js"></script>
+</body>
+
+</html>

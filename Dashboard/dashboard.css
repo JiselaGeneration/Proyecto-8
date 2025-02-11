@@ -1,16 +1,16 @@
 body {
     color: #21221c;
     /* font-family: comic neue; */
-    padding-top: 20px;
+    padding-top: 70px;
   }
-  /* navbar */
-  .bg-light {
-    background-color: #BF0413 !important; /* Cambia el color de fondo */
-    color: white ;
+
+.bg-light {
+    background-color:#BF0413 !important; /* Cambia el color de fondo */
+    color: white;
   }
   
   .nav-link {
-    color: white !important;
+    color: white;
   }
   
   .nav-item :hover {
@@ -47,19 +47,18 @@ body {
     width: 100%; /* Subraya completamente al pasar el mouse */
   }
   
-  /* Contactenos */
-  .error {
-    color: red;
-    font-size: 14px;
+  /* estilos del contador del carrito */
+  #cart-counter {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    background-color: #f7ffff; /* Color de fondo del contador */
+    color: black;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
   }
-
-  .group-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
   .btn-primary {
     background-color: #21221c !important; /* Cambia el color de fondo */
     border-color: #21221c !important; /* Cambia el color del borde */
@@ -69,31 +68,3 @@ body {
     background-color: #635c5c !important; /* Cambia el color al pasar el cursor */
     border-color: #21221c !important;
   }
-  .password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.password-container input {
-    padding-right: 30px; /* Espacio para el icono del ojo */
-}
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-}
-
-@media (max-width: 700px) {
-  #login{
-    min-height: 36rem ;
-  }
-}
-
-@media (min-width: 700px) {
-  #login{
-    min-height: 45rem ;
-  }
-}
-#footer {
-  background-color: rgba(0, 0, 0, 0.712) !important;
-}

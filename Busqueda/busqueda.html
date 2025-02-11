@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./productos.css" />
+  <link rel="stylesheet" href="./busqueda.css" />
   <title>Productos</title>
 </head>
 
@@ -73,64 +73,75 @@
       </div>
     </div>
   </nav>
+  
   <!-- Sección productos -->
   <div class="productos-header">
-    <h1 class="text-center baner">PRODUCTOS</h1>
+    <h1 class="text-center baner">BUSQUEDA</h1>
   </div>
+
+<!-- Barra de búsqueda -->
+<!-- Barra de búsqueda -->
+<div class="container mt-4">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div class="d-flex">
+              <input id="search-input" class="form-control rounded-pill" type="search" placeholder="Buscar producto..." aria-label="Search">
+              <button id="search-btn" class="btn btn-outline-primary ms-2 rounded-pill">
+                  <i class="bi bi-search"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
   <div class="container my-5">
     <div id="productos" class="row">
       <!-- Los productos se mostrarán aquí -->
     </div>
   </div>
-  
-  <!-- Footer -->
   <footer class="bg-light text-white pt-4" id="footer">
     <div class="container">
-      <div class="row">
-        <!-- Columna 1: Sobre Nosotros -->
-        <div class="col-md-4 mb-3">
-          <h5 class="card-title fw-bold text-center">Sobre Nosotros</h5>
-          <p>
-            Somos una empresa dedicada a ofrecer los mejores productos tradicionales y artesanías de nuestra tierra.
-            Creemos en la calidad y autenticidad de cada artículo que ofrecemos.
-          </p>
+        <div class="row">
+            <!-- Columna 1: Sobre Nosotros -->
+            <div class="col-md-4 mb-3">
+                <h5 class="card-title fw-bold text-center" >Sobre Nosotros</h5>
+                <p>
+                    Somos una empresa dedicada a ofrecer los mejores productos tradicionales y artesanías de nuestra tierra. Creemos en la calidad y autenticidad de cada artículo que ofrecemos.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div class="col-md-4 mb-3">
+                <h5 class="card-title fw-bold text-center">Enlaces Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li class="text-center"><a href="../Productos/productos.html" class="text-white text-decoration-none">Productos</a></li>
+                    <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html" class="text-white text-decoration-none">Sobre Nosotros</a></li>
+                    <li class="text-center"><a href="../Contactenos/contactenos.html" class="text-white text-decoration-none">Contáctenos</a></li>
+                    <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi Cuenta</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div class="col-md-4 mb-3">
+                <h5 class="card-title fw-bold text-center">Contacto</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-geo-alt"></i> Dirección: Calle 123, Bogotá, Colombia</li>
+                    <li><i class="bi bi-telephone"></i> Teléfono: +57 123 456 7890</li>
+                    <li><i class="bi bi-envelope"></i> <strong>Email:</strong> Tesorosdemitierra2025@gmail.com</li>
+                </ul>
+            </div>
+
         </div>
 
-        <!-- Columna 2: Enlaces Rápidos -->
-        <div class="col-md-4 mb-3">
-          <h5 class="card-title fw-bold text-center">Enlaces Rápidos</h5>
-          <ul class="list-unstyled">
-            <li class="text-center"><a href="../Productos/productos.html"
-                class="text-white text-decoration-none">Productos</a></li>
-            <li class="text-center"><a href="../SobreNosotros/SobreNosotros.html"
-                class="text-white text-decoration-none">Sobre
-                Nosotros</a></li>
-            <li class="text-center"><a href="../Contactenos/contactenos.html"
-                class="text-white text-decoration-none">Contáctenos</a></li>
-            <li class="text-center"><a href="../MiCuenta/micuenta.html" class="text-white text-decoration-none">Mi
-                Cuenta</a></li>
-          </ul>
+        <hr class="border-light">
+
+        <!-- Derechos reservados -->
+        <div class="text-center">
+            <p class="mb-0">© 2025 Tesoros de mi Tierra. Todos los derechos reservados.</p>
         </div>
-
-        <!-- Columna 3: Contacto -->
-        <div class="col-md-4 mb-3">
-          <h5 class="card-title fw-bold text-center">Contacto</h5>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-geo-alt"></i> Dirección: Calle 123, Bogotá, Colombia</li>
-            <li><i class="bi bi-telephone"></i> Teléfono: +57 123 456 7890</li>
-            <li><i class="bi bi-envelope"></i> <strong>Email:</strong> Tesorosdemitierra2025@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-
-      <hr class="border-light">
-
-      <!-- Derechos reservados -->
-      <div class="text-center">
-        <p class="mb-0">© 2025 Tesoros de mi Tierra. Todos los derechos reservados.</p>
-      </div>
     </div>
-  </footer>
+</footer>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -143,7 +154,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../Carrito/carrito.js"></script>
-  <script src="./ProductsController.js"></script>
+  <script src="./busqueda.js"></script>
 </body>
 
 </html>
