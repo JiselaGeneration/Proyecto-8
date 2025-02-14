@@ -30,13 +30,30 @@ CREATE TABLE pedido (
 	cantidad_comprada INT,
   );
 
+CREATE TABLE metodo_de_pago(
+	id_metodo_pago int AUTO_INCREMENT PRIMARY KEY,
+    tipo_pago VARCHAR(50) NOT NULL,
+    estado_pago VARCHAR(50) NOT NULL,
+    monto DECIMAL(10,3) NOT NULL,
+    fecha_pago DATE NOT NULL
+    );
 
-ALTER TABLE pedido ADD COLUMN cliente_id INT,
-ADD FOREIGN KEY (cliente_id) REFERENCES clientes(id_cliente);
+CREATE TABLE producto_pedido(
+    id_producto_pedido int AUTO_INCREMENT PRIMARY KEY,
+    cantidad int NOT null);
 
-ALTER TABLE pedido ADD COLUMN producto_id INT,
+
+ALTER TABLE producto_pedido
+ADD COLUMN pedido_id INT,
+ADD FOREIGN KEY (pedido_id) REFERENCES pedido(id_pedido);
+ 
+ALTER TABLE producto_pedido
+ADD COLUMN producto_id INT,
 ADD FOREIGN KEY (producto_id) REFERENCES productos(id_producto);
 
+ALTER TABLE pedido
+ADD COLUMN metodo_de_pago_id INT,
+ADD FOREIGN KEY (metodo_de_pago_id) REFERENCES metodo_de_pago(id_metodo_pago);
 
 INSERT INTO clientes(nombre_completo,email,contrasena,telefono) VALUES
 ("DANIELA OSPINA","DANIELA@GMAIL.COM","***********","3212133212"),
@@ -59,3 +76,19 @@ INSERT INTO pedido(fecha, direccion, total,cantidad_comprada, cliente_id, produc
 (2024-12-03,"calle 12 n° 24- 39",180.600, 3, 1, 1),  
 (2024-10-13,"carrera 13 # 25- 38",75.000, 3, 2, 2),  (2024-11-05,"diagonal 14 # 26- 37",285.000, 3, 3, 3),  (2025-01-28,"avenida 15 # 27- 36",130.000, 3, 4, 4),  (2024-02-11,"calle 16 # 28 - 35",195.000, 1, 5, 5)
 
+INSERT INTO metodo_de_pago (tipo_pago) VALUES 
+("Tarjeta de credito"),
+("Tarjeta de debito"),
+("Efectivo"),
+("PSE")
+
+
+UPDATE `pedido` SET `estado` = 'en proceso', `metodo_de_pago_id` = '1' WHERE `pedido`.`id_pedido` = 1; UPDATE `pedido` SET `estado` = 'en proceso', `metodo_de_pago_id` = '4' WHERE `pedido`.`id_pedido` = 2; UPDATE `pedido` SET `estado` = 'pendiente', `metodo_de_pago_id` = '2' WHERE `pedido`.`id_pedido` = 3; UPDATE `pedido` SET `envio` = '1', `estado` = 'entregado', `metodo_de_pago_id` = '3' WHERE `pedido`.`id_pedido` = 4; UPDATE `pedido` SET `envio` = '1', `estado` = 'entregado', `metodo_de_pago_id` = '2' WHERE `pedido`.`id_pedido` = 5;
+
+
+INSERT INTO `producto_pedido` (`cantidad`, `pedido_id`, `producto_id`) VALUES 
+( '3', '1', '1'),
+( '3', '2', '2'),
+( '4', '4', '4'),
+( '3', '3', '3'),
+( '3', '5', '5')
