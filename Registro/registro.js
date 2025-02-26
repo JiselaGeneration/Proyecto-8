@@ -80,81 +80,76 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('bi-eye-slash');
     });
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        // Obtener los valores de los campos del formulario
-        const name = form.name.value;
-        const email = form.email.value;
-        const phone = form.phone.value;
-        const password = form.password.value;
-        const confirmPassword = form.confirmPassword.value;
+       
 
-        // Limpiar mensajes de error previos
+        const API_URL = "http://localhost:8080/clientes";
+        const registerForm = document.getElementById("registroForm");
+        
+        if (registerForm) {
+            registerForm.addEventListener("submit", async function (event) {
+                event.preventDefault();
+        
+                const nombre_completo = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const telefono = document.getElementById("phone").value;
+                const contrasena = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+
+                 // Limpiar mensajes de error previos
         document.getElementById('nameError').textContent = '';
         document.getElementById('emailError').textContent = '';
         document.getElementById('phoneError').textContent = '';
         document.getElementById('confirmError').textContent = '';
         document.getElementById('passwordError').textContent = '';
 
-        let valid = true;
-
-        // Validar Nombre (debe contener solo letras y espacios)
-        if (!/^[a-zA-Z\s]+$/.test(name)) {
-            document.getElementById('nameError').textContent = 'Nombre inválido. Solo se permiten letras y espacios.';
-            valid = false;
+        
+        
+                if (!nombre_completo || !email || !telefono || !contrasena || !confirmPassword) {
+                    document.getElementById("error-message").textContent = "Por favor, completa todos los campos.";
+                    return;
+                }
+        
+                if (contrasena !== confirmPassword) {
+                    document.getElementById("error-message").textContent = "Las contraseñas no coinciden.";
+                    return;
+                }
+        
+                try {
+                    console.log("Dentro de try", nombre_completo, email, telefono, contrasena);
+        
+                    const requestBody = JSON.stringify({
+                        nombre_completo: nombre_completo,
+                        email: email,
+                        telefono: telefono,
+                        contrasena: contrasena
+                    });
+                    console.log("Datos enviados:", requestBody);
+        
+                    const response = await fetch(`${API_URL}/crear`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: requestBody
+                    });
+        
+                    if (response.ok) {
+                        console.log("Registro exitoso");
+        
+                         const token = await response.text(); // Obtener el token del JSON
+        
+                        localStorage.setItem("jwt", token); // Guardar el token en localStorage
+        
+                        window.location.href = "../Login/login.html"; // Redirigir a la página protegida
+                    } else {
+                        const errorMessage = await response.text();
+                        document.getElementById("error-message").textContent = `Error en el registro: ${errorMessage}`;
+                    }
+                } catch (error) {
+                    console.error("Error durante el registro:", error);
+                }
+            });
         }
-
-        // Validar Correo electrónico (utiliza el type="email" del input)
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            document.getElementById('emailError').textContent = 'Correo electrónico inválido.';
-            valid = false;
-        }
-
-        // Validar Teléfono (debe contener solo números)
-        if (!/^\d{10}$/.test(phone)) {
-            document.getElementById('phoneError').textContent = 'Teléfono inválido. El formato debe ser 3214567890.';
-            valid = false;
-        }
-
-        // Validar la contraseña
-        if (!passwordRegex.test(password)) {
-            document.getElementById('passwordError').textContent = 'Contraseña inválida. Debe tener mínimo 8 caracteres, una letra mayúscula, un número y un carácter especial.';
-            valid = false;
-        }
-
-        // Validar Confirmar Contraseña
-        if (confirmPassword !== password) {
-            document.getElementById('confirmError').textContent = 'Las contraseñas no coinciden';
-            valid = false;
-        }
-
-        if (valid) {
-            // Crear un objeto de usuario
-            const usuario = {
-                name: name,
-                email: email,
-                phone: phone,
-                password: password
-            };
-
-            // Crear array para usuarios.
-            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-            // Agregar nuevo usuario.
-            usuarios.push(usuario);
-
-            // Guardar el objeto de usuario en el Local Storage
-            localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-            // Mostrar un mensaje de éxito
-            alert("Registro exitoso. Los datos se han guardado en el Local Storage.");
-
-            // Limpiar el formulario
-            form.reset();
-
-            // Opcionalmente, redirigir a otra página
-            window.location.href = "../Login/login.html";
-        }
+        
     });
-});
